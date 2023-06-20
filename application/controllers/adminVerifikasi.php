@@ -7,10 +7,10 @@
             
             if($this->input->post('pencarian')){
                 $pencarian = $this->input->post('pencarian', true);
-                $this->db->like('nama_warga', $pencarian);
+                // $this->db->like('nama_warga', $pencarian);
 
-                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
-
+                // $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
+                $data['transaksi'] = $this->AdminVerifikasi_m->caridata($pencarian);
             }
             
             $this->load->view('adminVerifikasi', $data);
