@@ -108,6 +108,30 @@ body {
 	color: #007bff;
 }
 
+.halaman .konten .judul .tombol {
+	display: flex;
+	flex-direction: row;
+}
+
+.halaman .konten .judul .tombol form {
+	display: flex;
+	flex-direction: row;
+}
+
+.halaman .konten .judul .tombol form .pencarian {
+	width: 300px;
+	height: 31px;
+	font-size: 14px;
+}
+
+.halaman .konten .judul .tombol form .cari {
+	padding: 0 8px;
+	margin-right: 10px;
+	height: 31px;
+	font-size: 12px;
+	font-family: "nunito";
+}
+
 .halaman .konten .judul .tombol a button {
 	padding: 0 8px;
 	height: 31px;
@@ -214,8 +238,27 @@ tr:nth-child(even) {
 		display: none;
 	}
 
+	.halaman .konten .judul {
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+
 	.halaman .konten .judul h1 {
 		font-size: 16px;
+	}
+
+	.halaman .konten .judul .tombol form {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.halaman .konten .judul .tombol form .pencarian {
+		width: 140px;
+		font-size: 12px;
+	}
+
+	.halaman .konten .judul .tombol form .cari {
+		margin-right: 5px;
 	}
 
 	.halaman .konten .judul button {

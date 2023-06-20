@@ -4,6 +4,15 @@
         public function index()
         {
             $data['transaksi'] = $this->AdminVerifikasi_m->tampil('transaksi')->result();
+            
+            if($this->input->post('pencarian')){
+                $pencarian = $this->input->post('pencarian', true);
+                $this->db->like('nama_warga', $pencarian);
+
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
+
+            }
+            
             $this->load->view('adminVerifikasi', $data);
         }
 

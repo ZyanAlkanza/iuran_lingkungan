@@ -87,10 +87,23 @@
       <div class="konten">
         <div class="judul">
           <h1>Verifikasi Pembayaran</h1>
+          
+          
+            
+
           <div class="tombol">
+            
+            <form action="" method="POST">
+              <input type="text" class="form-control pencarian" name= "pencarian" placeholder="Cari Nama Warga..." aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary cari" type="submit" id="button-addon2">Cari</button>
+              </div>
+            </form>
+
             <a href="<?php echo base_url('adminVerifikasi/tambah')?>">
-              <button class="btn btn-primary">Tambah</button>
+              <button class="btn btn-primary">Tambah</button>  
             </a>
+          
           </div>
         </div>
 
