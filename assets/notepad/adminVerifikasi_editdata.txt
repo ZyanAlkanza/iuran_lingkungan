@@ -1,0 +1,63 @@
+public function editdata()
+        {
+            $id_transaksi       = $this->input->post('id_transaksi');
+            $id_iuran           = $this->input->post('id_iuran');
+            $id_warga           = $this->input->post('id_warga');
+            $atas_nama          = $this->input->post('atas_nama');
+            $tanggal_pembayaran = $this->input->post('tanggal_pembayaran');
+            $pembayaran_bulan   = $this->input->post('pembayaran_bulan');
+
+            $bukti_pembayaran   = $_FILES['bukti_pembayaran']['name'];
+                if ($bukti_pembayaran != null){
+                    $config['upload_path']      = './assets/img/bukti';
+                    $config['allowed_types']    = 'jpg|jpeg|png';
+
+                    $this->upload->initialize($config);
+
+                    if(!$this->upload->do_upload('bukti_pembayaran')){
+                        $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show text-small" role="alert">
+                        Gambar gagal diupload! <strong>Format gambar salah.</strong> Upload gambar berformat JPG, JPEG, atau PNG.
+                            <button type="button" class="close pesan" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>');
+                        redirect('adminVerifikasi');
+                    } else {
+                        $bukti_pembayaran = $this->upload->data('file_name');
+                    }
+                }
+
+            $keterangan         = $this->input->post('keterangan');
+
+            $data = array(
+                'id_iuran'         => $id_iuran,
+                'bukti_pembayaran' => $bukti_pembayaran,
+                'keterangan'       => $keterangan,
+            );
+
+            $where = array(
+                'id_transaksi' => $id_transaksi
+            );
+
+            $this->AdminDetail_m->updatedata($where, $data, 'detail_transaksi');
+
+            $data2 = array(
+                'id_warga'           => $id_warga,
+                'atas_nama'          => $atas_nama,
+                'tanggal_pembayaran' => $tanggal_pembayaran,
+                'pembayaran_bulan'   => $pembayaran_bulan,
+            );
+
+            $where2 = array(
+                'id_transaksi' => $id_transaksi
+            );
+
+            $this->AdminVerifikasi_m->updatedata($where2, $data2, 'transaksi');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            Data <strong>Berhasil</strong> diedit!
+            <button type="button" class="close pesan" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+          redirect('adminVerifikasi');
+        }

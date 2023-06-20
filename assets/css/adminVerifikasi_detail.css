@@ -1,0 +1,306 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* color {
+  -blue: #007bff;
+  -red: #dd0000;
+  -black: #343a40;
+  -grey: #eeeeee;
+} */
+
+body {
+	min-height: 100vh;
+}
+
+.halaman {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #007bff;
+}
+
+/* Konten ------------------------------------------------------------------------------------*/
+.halaman .konten {
+	padding: 10px 30px;
+	background-color: #fff;
+}
+
+.halaman .konten .judul h1 {
+	/* background-color: yellow; */
+	margin-top: 20px;
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-family: "nunito", sans-serif;
+	font-weight: 700;
+	color: #007bff;
+}
+
+/* Isi Konten --------------------------------------------------------------------------------*/
+.halaman .konten form .isi {
+	display: flex;
+	flex-direction: row;
+}
+
+.teks {
+	width: 50%;
+}
+
+.gambar {
+	width: 50%;
+}
+
+.halaman .konten form .isi h1 {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .konten form .isi h2 {
+	margin-bottom: 14px;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .konten form .isi select {
+	width: 300px;
+	height: 30px;
+	padding: 0 5px;
+	margin-bottom: 14px;
+	font-size: 12px;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .konten form .isi textarea {
+	width: 300px;
+	height: 100px;
+	padding: 5px;
+	margin-bottom: 14px;
+	font-size: 12px;
+	font-family: "nunito", sans-serif;
+	resize: none;
+}
+
+.tombol button {
+	width: 300px;
+	height: 30px;
+	margin-top: 10px;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+}
+
+/* Gambar ------------------------------------------------------------------------------------*/
+.halaman .gambar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.halaman .gambar h1 {
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .gambar img {
+	width: 53%;
+	margin-top: 10px;
+}
+
+/* Phone -------------------------------------------------------------------------------*/
+@media only screen and (max-width: 319px) {
+	.halaman .menu {
+		width: 15vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi h2 {
+		font-size: 12px;
+	}
+}
+
+/* Smartphone -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.halaman .menu {
+		width: 15vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten {
+		padding: 10px 10px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 16px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 12px;
+		margin-bottom: 3px;
+	}
+
+	.halaman .konten .isi h2 {
+		margin-bottom: 8px;
+		font-size: 12px;
+	}
+
+	.halaman .konten form .isi select {
+		width: 200px;
+		margin-bottom: 8px;
+	}
+
+	.halaman .konten form .isi textarea {
+		width: 200px;
+		margin-bottom: 8px;
+		font-size: 10px;
+	}
+
+	.tombol button {
+		width: 200px;
+		height: 24px;
+		font-size: 12px;
+	}
+
+	.halaman .gambar h1 {
+		font-size: 16px;
+	}
+
+	.halaman .gambar img {
+		width: 95%;
+	}
+}
+
+/* Tablet -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.halaman .menu {
+		width: 10vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 24px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+
+	.halaman .konten .isi h2 {
+		margin-bottom: 14px;
+		font-size: 14px;
+	}
+
+	.halaman .konten .isi select {
+		width: 300px;
+		margin-bottom: 14px;
+	}
+
+	.halaman .konten .isi textarea {
+		width: 300px;
+		height: 300px;
+		margin-bottom: 14px;
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi .tombol button {
+		width: 300px;
+		height: 30px;
+		font-size: 12px;
+	}
+
+	.halaman .gambar h1 {
+		font-size: 18px;
+	}
+
+	.halaman .gambar img {
+		width: 70%;
+	}
+}
+
+/* Notebook -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+	.halaman .menu .logo i,
+	.halaman .menu .logo h1 {
+		font-size: 14px;
+		color: #007bff;
+	}
+
+	.halaman .menu ul li {
+		font-size: 12px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .gambar h1 {
+		font-size: 14px;
+	}
+
+	.halaman .gambar img {
+		width: 50%;
+	}
+}
