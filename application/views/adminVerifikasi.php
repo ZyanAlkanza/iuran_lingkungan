@@ -94,7 +94,7 @@
           <div class="tombol">
             
             <form action="" method="POST">
-              <input type="text" class="form-control pencarian" name= "pencarian" placeholder="Cari data pembayaran..." autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <input type="text" class="form-control pencarian" name= "pencarian" placeholder="Cari Nama, Blok Rumah atau Bulan..." autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2">
               <div class="input-group-append">
                 <button class="btn btn-outline-primary cari" type="submit" id="button-addon2">Cari</button>
               </div>
@@ -128,7 +128,7 @@
             $no = 1;
             foreach ($transaksi as $tr) :
             ?>
-            
+
             <tr>
               <td><?php echo $no++ ?></td>
               <td><?php echo $tr->nama_warga ?></td>
@@ -196,6 +196,13 @@
             <?php endforeach; ?>
 
           </table>
+
+          <?php if(empty($transaksi)) :?>
+          <div class="alert alert-danger mt-3" role="alert">
+            Data Tidak Ditemukan!
+          </div>
+          <?php endif; ?>
+
         </div>
       </div>
     </div>

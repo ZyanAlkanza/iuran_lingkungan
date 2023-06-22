@@ -21,6 +21,7 @@
             $this->db->join('iuran iu', 'iu.id_iuran = dt.id_iuran', 'LEFT');
             $this->db->like('nama_warga', $pencarian);
             $this->db->or_like('blok_rumah', $pencarian);
+            $this->db->or_like('pembayaran_bulan', $pencarian);
             return $this->db->get()->result();
         }
 
