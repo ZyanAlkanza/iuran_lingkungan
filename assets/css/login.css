@@ -19,33 +19,33 @@ body {
 	display: flex;
 }
 
-.halaman .teks .form {
+.halaman .teks form {
 	width: 80%;
 	height: max-content;
 	margin: auto;
 }
 
-.halaman .teks .form .judul {
+.halaman .teks form .judul {
 	margin-bottom: 30px;
 }
 
-.halaman .teks .form .judul h5 {
+.halaman .teks form .judul h5 {
 	font-family: "nunito", sans-serif;
 }
 
-.halaman .teks .form .judul h1 {
+.halaman .teks form .judul h1 {
 	font-family: "nunito", sans-serif;
 	font-weight: 700;
 	font-size: 32px;
 }
 
-.halaman .teks .form label {
+.halaman .teks form label {
 	margin-top: 20px;
 	font-family: "nunito", sans-serif;
 	font-size: 16px;
 }
 
-.halaman .teks .form input:invalid {
+.halaman .teks form input:invalid {
 	border: 2px solid red;
 	animation: shake 0.2s;
 }
@@ -64,17 +64,17 @@ body {
 	}
 }
 
-.halaman .teks .form .nama {
+.halaman .teks form .nama {
 	display: flex;
 	flex-direction: column;
 }
 
-.halaman .teks .form .sandi {
+.halaman .teks form .sandi {
 	display: flex;
 	flex-direction: column;
 }
 
-.halaman .teks .form .tombol button {
+.halaman .teks form .tombol button {
 	width: 100%;
 	margin-top: 30px;
 	font-family: "nunito", sans-serif;

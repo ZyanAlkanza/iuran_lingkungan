@@ -35,14 +35,18 @@
   <body>
     <div class="halaman">
       <div class="teks">
-        <div class="form">
+        <form method="POST" action="<?php echo base_url('auth/login')?>">
           <div class="judul">
             <h5>Sistem Informasi</h5>
             <h1>Iuran Lingkungan</h1>
           </div>
+
+          <?php echo $this->session->flashdata('pesan') ?>
+
+
           <div class="nama">
             <label for="">Nama Pengguna</label>
-            <input class="form-control" type="text" pattern="[A-Za-z]*" />
+            <input class="form-control" type="text" pattern="[A-Za-z0-9]*" name="username" autocomplete="off"/>
           </div>
           <div class="sandi">
             <label for="">Kata Sandi</label>
@@ -50,14 +54,15 @@
               class="form-control"
               type="password"
               pattern="[A-Za-z0-9]*"
+              name="password"
             />
           </div>
           <div class="tombol">
-            <a href="<?php echo base_url('#')?>">
-              <button class="btn btn-primary">Masuk</button>
-            </a>
+            <!-- <a href="<php echo base_url('#')?>"> -->
+              <button class="btn btn-primary" type="submit" name="submit">Masuk</button>
+            <!-- </a> -->
           </div>
-        </div>
+        </form>
       </div>
       <div class="gambar">
         <div class="cover">
