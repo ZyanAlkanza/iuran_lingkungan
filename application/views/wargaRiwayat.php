@@ -86,32 +86,36 @@
         <table>
           <tr>
             <th>No</th>
-            <th>Bulan</th>
+            <th>Pembayaran Bulan</th>
             <th>Tanggal Bayar</th>
             <th>Pembayaran Atas Nama</th>
-            <th>Status</th>
+            <th>Jenis Iuran</th>
+            <th>Status Pembayaran</th>
           </tr>
+
+          <?php
+          $no = 1; 
+          foreach ($warga as $wg) : 
+          ?>
+
           <tr>
-            <td>1</td>
-            <td>Januari</td>
-            <td>18/01/2023</td>
-            <td>Zyan Alkanza</td>
-            <td>Lunas</td>
+            <td><?php echo $no++ ?></td>
+            <td><?php echo $wg->pembayaran_bulan ?></td>
+            <td><?php echo date('d F Y', strtotime($wg->tanggal_pembayaran)) ?></td>
+            <td><?php echo $wg->atas_nama ?></td>
+            <td><?php echo $wg->jenis_iuran ?></td>
+            <td><?php if ($wg->status == 0) {
+                    echo '<span class="badge badge-pill badge-warning p-1 pr-2 pl-2">Belum di Verifikasi</span>';
+                  } elseif ($wg->status == 1) {
+                    echo '<span class="badge badge-pill badge-danger p-1 pr-2 pl-2">Belum Bayar</span>';
+                  } else {
+                    echo '<span class="badge badge-pill badge-success p-1 pr-2 pl-2">Sudah Bayar</span>';
+                  }?>
+            </td>
           </tr>
-          <tr>
-            <td>2</td>
-            <td>Februari</td>
-            <td>10/03/2023</td>
-            <td>Zyan Alkanza</td>
-            <td>Lunas</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Maret</td>
-            <td>-</td>
-            <td>-</td>
-            <td>Belum</td>
-          </tr>
+
+          <?php endforeach; ?>
+
         </table>
       </div>
     </div>
