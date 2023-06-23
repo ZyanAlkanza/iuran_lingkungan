@@ -68,7 +68,7 @@
             </li>
           </a>
 
-          <a href="<?php echo base_url('login')?>">
+          <a href="<?php echo base_url('auth/logout')?>">
             <li class="keluar">
               <i class="fa-solid fa-right-from-bracket"></i>
               <span>Keluar</span>
