@@ -47,6 +47,7 @@
           <div class="nama">
             <label for="">Nama Pengguna</label>
             <input class="form-control" type="text" pattern="[A-Za-z0-9]*" name="username" autocomplete="off"/>
+            <div class="text-small text-danger"><?php echo form_error('username'); ?></div>
           </div>
           <div class="sandi">
             <label for="">Kata Sandi</label>
@@ -56,6 +57,7 @@
               pattern="[A-Za-z0-9]*"
               name="password"
             />
+            <div class="text-small text-danger"><?php echo form_error('password'); ?></div>
           </div>
           <div class="tombol">
             <!-- <a href="<php echo base_url('#')?>"> -->

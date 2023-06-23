@@ -98,6 +98,10 @@ body {
 	width: 100%;
 }
 
+.text-small {
+	font-size: 12px;
+}
+
 /* Smartphone */
 @media only screen and (max-width: 600px) {
 	.halaman .teks {
