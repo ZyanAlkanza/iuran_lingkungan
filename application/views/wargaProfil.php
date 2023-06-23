@@ -82,22 +82,24 @@
           <h1>Profil</h1>
         </div>
 
+        <?php foreach($warga as $wg) : ?>
         <div class="isi">
           <div class="nama">
-            <h1>Nama</h1>
-            <h2>Zyan Alkanza</h2>
+            <h1>Nama Warga</h1>
+            <h2><?php echo $wg->nama_warga ?></h2>
           </div>
+
           <div class="nama_pengguna">
-            <h1>Nama Pengguna</h1>
-            <h2>Zyan</h2>
+            <h1>Email</h1>
+            <h2><?php echo $wg->email ?></h2>
           </div>
           <div class="alamat">
             <h1>Alamat</h1>
-            <h2>Puri Kencana Blok D7 RT. 009/018</h2>
+            <h2>Puri Kencana Blok <?php echo $wg->blok_rumah ?> RT. 0<?php echo $wg->rt ?> / RW. 0<?php echo $wg->rw ?></h2>
           </div>
           <div class="telepon">
             <h1>Telepon</h1>
-            <h2>089653534708</h2>
+            <h2><?php echo $wg->telepon ?></h2>
           </div>
 
           <div class="tombol">
@@ -112,6 +114,8 @@
             </a>
           </div>
         </div>
+        <?php endforeach; ?>
+
       </div>
     </div>
 

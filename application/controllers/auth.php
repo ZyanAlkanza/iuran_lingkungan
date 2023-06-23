@@ -2,7 +2,7 @@
     class auth extends CI_Controller{
         public function login()
         {
-            $this->form_validation->set_rules('username', 'Nama Pengguna', 'required');
+            $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('password', 'Kata Sandi', 'required');
 
             if($this->form_validation->run() == FALSE){
@@ -12,11 +12,11 @@
 
                 if($auth == FALSE){
                     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
-                    Nama Pengguna atau Kata Sandi anda salah!
+                    E-mail atau Kata Sandi anda salah!
                   </div>');
                     redirect('auth/login');
                 }else{
-                    $this->session->set_userdata('username', $auth->username);
+                    $this->session->set_userdata('email', $auth->email);
                     $this->session->set_userdata('role', $auth->role);
 
                     switch ($auth->role) {

@@ -45,9 +45,9 @@
 
 
           <div class="nama">
-            <label for="">Nama Pengguna</label>
-            <input class="form-control" type="text" pattern="[A-Za-z0-9]*" name="username" autocomplete="off"/>
-            <div class="text-small text-danger"><?php echo form_error('username'); ?></div>
+            <label for="">Email</label>
+            <input class="form-control" type="text" name="email" autocomplete="off"/>
+            <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
           </div>
           <div class="sandi">
             <label for="">Kata Sandi</label>
