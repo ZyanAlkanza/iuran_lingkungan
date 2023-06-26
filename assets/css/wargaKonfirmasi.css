@@ -102,12 +102,12 @@ body {
 }
 
 /* Isi Konten --------------------------------------------------------------------------------*/
-.halaman .konten .form h3 {
+.halaman .konten form h3 {
 	font-size: 16px;
 	font-family: "nunito", sans-serif;
 }
 
-.halaman .konten .form input {
+.halaman .konten form select {
 	width: 350px;
 	height: 30px;
 	margin-bottom: 20px;
@@ -116,16 +116,26 @@ body {
 	padding: 3px 5px;
 }
 
-.halaman .konten .form textarea {
+.halaman .konten form input {
 	width: 350px;
-	height: 200px;
+	height: 30px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+	padding: 3px 5px;
+}
+
+.halaman .konten form textarea {
+	width: 350px;
+	height: 150px;
 	margin-bottom: 20px;
 	resize: none;
 	font-size: 14px;
 	font-family: "nunito", sans-serif;
 }
 
-.halaman .konten .form button {
+.halaman .konten form button {
+	width: 350px;
 	font-size: 14px;
 	font-family: "nunito", sans-serif;
 	padding: 8px;
@@ -188,22 +198,22 @@ body {
 		font-size: 16px;
 	}
 
-	.halaman .konten .form h3 {
+	.halaman .konten form h3 {
 		font-size: 12px;
 	}
 
-	.halaman .konten .form input {
+	.halaman .konten form input {
 		width: 230px;
 		height: 25px;
 		font-size: 10px;
 	}
 
-	.halaman .konten .form textarea {
+	.halaman .konten form textarea {
 		width: 230px;
 		font-size: 12px;
 	}
 
-	.halaman .konten .form button {
+	.halaman .konten form button {
 		font-size: 12px;
 		padding: 6px;
 	}
@@ -237,23 +247,23 @@ body {
 		font-size: 18px;
 	}
 
-	.halaman .konten .form h3 {
+	.halaman .konten form h3 {
 		font-size: 14px;
 	}
 
-	.halaman .konten .form input {
+	.halaman .konten form input {
 		width: 350px;
 		height: 30px;
 		font-size: 12px;
 		padding: 4px 5px;
 	}
 
-	.halaman .konten .form textarea {
+	.halaman .konten form textarea {
 		width: 350px;
 		font-size: 12px;
 	}
 
-	.halaman .konten .form button {
+	.halaman .konten form button {
 		font-size: 14px;
 		padding: 8px;
 	}
@@ -275,23 +285,23 @@ body {
 		font-size: 14px;
 	}
 
-	.halaman .konten .form h3 {
+	.halaman .konten form h3 {
 		font-size: 12px;
 	}
 
-	.halaman .konten .form input {
+	.halaman .konten form input {
 		width: 350px;
 		height: 30px;
 		font-size: 12px;
 		padding: 4px 5px;
 	}
 
-	.halaman .konten .form textarea {
+	.halaman .konten form textarea {
 		width: 350px;
 		font-size: 12px;
 	}
 
-	.halaman .konten .form button {
+	.halaman .konten form button {
 		font-size: 12px;
 		padding: 8px;
 	}

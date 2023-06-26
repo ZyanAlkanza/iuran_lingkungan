@@ -81,33 +81,62 @@
         <div class="judul">
           <h1>Form Pembayaran</h1>
         </div>
+        
+        <?php echo $this->session->flashdata('pesan') ?>
 
-        <div class="form">
+        <form method="POST" action="<?php echo base_url('wargaKonfirmasi/tambahdata')?>" enctype="multipart/form-data">
+          
+          <?php foreach($warga as $wg) :?>
+            <input type="hidden" value="<?php echo $wg->id_warga?>" name="id_warga">
+          <?php endforeach; ?>
+
+          <div class="jenis-iuran">
+            <h3>Jenis Iuran <span class="text-danger">*</span></h3>
+            <select class="form-control" id="id_iuran" name="id_iuran" required>
+              <option value="">Pilih Iuran</option>
+              <?php foreach($iuran as $iu) :?>
+              <option value="<?php echo $iu->id_iuran?>"><?php echo $iu->jenis_iuran ?></option>
+              <?php endforeach; ?>
+            </select>
+          </div>
           <div class="input-nama">
-            <h3>Pembayaran Atas Nama</h3>
-            <input class="form-control" type="text" placeholder="a.n. " />
+            <h3>Pembayaran Atas Nama <span class="text-danger">*</span></h3>
+            <input class="form-control" type="text" placeholder="a.n. " name="atas_nama"/>
           </div>
           <div class="input-tanggal">
-            <h3>Tanggal Pembayaran</h3>
-            <input class="form-control" type="date" />
+            <h3>Tanggal Pembayaran <span class="text-danger">*</span></h3>
+            <input class="form-control" type="date" name="tanggal_pembayaran"/>
           </div>
-          <div class="input-jumlah">
-            <h3>Jumlah Pembayaran</h3>
-            <input class="form-control" type="number" placeholder="Rp." />
-          </div>
+          <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
+          <!-- <div class="input-group mb-3"> -->
+            <select class="form-control" id="pembayaran_bulan" name="pembayaran_bulan" required>
+              <option value="">Pilih Bulan</option>
+              <option value="Januari">Januari</option>
+              <option value="Februari">Februari</option>
+              <option value="Maret">Maret</option>
+              <option value="April">April</option>
+              <option value="Mei">Mei</option>
+              <option value="Juni">Juni</option>
+              <option value="Juli">Juli</option>
+              <option value="Agustus">Agustus</option>
+              <option value="September">September</option>
+              <option value="Oktober">Oktober</option>
+              <option value="November">November</option>
+              <option value="Desember">Desember</option>
+            </select>
           <div class="input-bukti">
-            <h3>Bukti Pembayaran</h3>
-            <input class="form-control" type="file" />
+            <h3>Bukti Pembayaran <span class="text-danger">*</span></h3>
+            <input class="form-control" type="file" name="bukti_pembayaran" required/>
           </div>
           <div class="input-keterangan">
             <h3>Keterangan</h3>
-            <textarea name="" id="" maxlength="300"></textarea>
+            <textarea name="keterangan" id="keterangan" maxlength="300"></textarea>
           </div>
 
-          <a href="#">
+          
             <button type="submit" class="btn btn-primary">Konfirmasi</button>
-          </a>
-        </div>
+          
+        </form>
       </div>
     </div>
 
