@@ -133,7 +133,8 @@
             <textarea name="keterangan" id="keterangan" maxlength="300"></textarea>
           </div>
 
-          
+          <h3 class="wajib"><span class="text-danger">*</span>Wajib Diisi</h3>
+
             <button type="submit" class="btn btn-primary">Konfirmasi</button>
           
         </form>

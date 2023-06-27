@@ -134,6 +134,13 @@ body {
 	font-family: "nunito", sans-serif;
 }
 
+.halaman .konten form .wajib {
+	font-size: 10px;
+	font-weight: 600;
+	color: #dd0000;
+	margin-bottom: 15px;
+}
+
 .halaman .konten form button {
 	width: 350px;
 	font-size: 14px;
@@ -202,18 +209,32 @@ body {
 		font-size: 12px;
 	}
 
+	.halaman .konten form label {
+		font-size: 12px;
+	}
+
+	.halaman .konten form select {
+		width: 230px;
+		height: 25px;
+		font-size: 10px;
+		margin-bottom: 10px;
+	}
+
 	.halaman .konten form input {
 		width: 230px;
 		height: 25px;
 		font-size: 10px;
+		margin-bottom: 10px;
 	}
 
 	.halaman .konten form textarea {
 		width: 230px;
 		font-size: 12px;
+		margin-bottom: 10px;
 	}
 
 	.halaman .konten form button {
+		width: 230px;
 		font-size: 12px;
 		padding: 6px;
 	}

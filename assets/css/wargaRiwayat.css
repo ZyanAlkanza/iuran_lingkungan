@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 /* color {
@@ -11,222 +11,232 @@
 } */
 
 body {
-  min-height: 100vh;
+	min-height: 100vh;
 }
 
 .halaman {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	min-height: 100vh;
 }
 
 .halaman .menu {
-  width: 20vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+	width: 20vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 .halaman .menu .logo {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 10px;
-  cursor: pointer;
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+	cursor: pointer;
 }
 
 .halaman .menu .logo i,
 .halaman .menu .logo h1 {
-  font-size: 24px;
-  color: #007bff;
+	font-size: 24px;
+	color: #007bff;
 }
 
 .halaman .menu .logo h1 {
-  font-family: "nunito", sans-serif;
-  font-weight: 600;
-  margin-top: 5px;
+	font-family: "nunito", sans-serif;
+	font-weight: 600;
+	margin-top: 5px;
 }
 
 .halaman .menu ul li span {
-  font-family: "nunito", sans-serif;
-  margin-left: 10px;
+	font-family: "nunito", sans-serif;
+	margin-left: 0px;
 }
 
 .halaman .menu ul li {
-  font-size: 16px;
-  padding: 15px 20px;
-  cursor: pointer;
+	font-size: 16px;
+	padding: 15px 20px;
+	cursor: pointer;
 }
 
 .halaman .menu ul li:hover {
-  color: #007bff;
-  background: #eeeeee;
+	color: #007bff;
+	background: #eeeeee;
+}
+
+.halaman .menu ul li i {
+	width: 25px;
 }
 
 .halaman .menu a {
-  text-decoration: none;
-  color: #343a40;
+	text-decoration: none;
+	color: #343a40;
 }
 
 .halaman .menu a .keluar {
-  color: #dd0000;
-  margin-top: 55vh;
+	color: #dd0000;
+	margin-top: 55vh;
 }
 
 .halaman .menu a .keluar:hover {
-  color: #eeeeee;
-  background: #dd0000;
+	color: #eeeeee;
+	background: #dd0000;
 }
 
 /* Konten ------------------------------------------------------------------------------------*/
 .halaman .konten {
-  /* background-color: green; */
-  width: 85%;
-  padding: 10px 30px;
+	/* background-color: green; */
+	width: 85%;
+	padding: 10px 30px;
 }
 
 .halaman .konten .judul h1 {
-  /* background-color: yellow; */
-  margin-top: 20px;
-  margin-bottom: 24px;
-  font-size: 18px;
-  font-family: "nunito", sans-serif;
-  font-weight: 700;
-  color: #007bff;
+	/* background-color: yellow; */
+	margin-top: 20px;
+	margin-bottom: 24px;
+	font-size: 18px;
+	font-family: "nunito", sans-serif;
+	font-weight: 700;
+	color: #007bff;
 }
 
 /* Isi Konten --------------------------------------------------------------------------------*/
+.halaman .konten .bungkus {
+	overflow-x: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #e8e8e8 #fff;
+}
+
 .halaman .konten table {
-  width: 100%;
-  font-size: 14px;
-  font-family: "nunito", sans-serif;
-  text-align: center;
-  border: 1px solid #eeeeee;
+	width: 100%;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+	text-align: center;
+	border: 1px solid #eeeeee;
 }
 
 .halaman .konten th,
 td {
-  padding: 5px 0;
+	padding: 5px 5px;
 }
 
 tr:nth-child(even) {
-  background-color: #eeeeee;
+	background-color: #eeeeee;
 }
 
 /* Phone -------------------------------------------------------------------------------*/
 @media only screen and (max-width: 319px) {
-  .halaman .menu {
-    width: 15vw;
-  }
+	.halaman .menu {
+		width: 15vw;
+	}
 
-  .halaman .menu .logo i {
-    font-size: 20px;
-  }
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
 
-  .halaman .menu .logo h1 {
-    display: none;
-  }
+	.halaman .menu .logo h1 {
+		display: none;
+	}
 
-  .halaman .menu ul li i {
-    display: flex;
-    justify-content: center;
-    font-size: 14px;
-  }
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
 
-  .halaman .menu ul li span {
-    display: none;
-  }
+	.halaman .menu ul li span {
+		display: none;
+	}
 
-  .halaman .konten .judul h1 {
-    font-size: 14px;
-  }
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
 }
 
 /* Smartphone -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-  .halaman .menu {
-    width: 15vw;
-  }
+	.halaman .menu {
+		width: 15vw;
+	}
 
-  .halaman .menu .logo i {
-    font-size: 20px;
-  }
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
 
-  .halaman .menu .logo h1 {
-    display: none;
-  }
+	.halaman .menu .logo h1 {
+		display: none;
+	}
 
-  .halaman .menu ul li i {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-  }
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 16px;
+	}
 
-  .halaman .menu ul li span {
-    display: none;
-  }
+	.halaman .menu ul li span {
+		display: none;
+	}
 
-  .halaman .konten .judul h1 {
-    font-size: 16px;
-  }
+	.halaman .konten .judul h1 {
+		font-size: 16px;
+	}
 
-  .halaman .konten table {
-    font-size: 12px;
-  }
+	.halaman .konten table {
+		font-size: 12px;
+	}
 }
 
 /* Tablet -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .halaman .menu {
-    width: 10vw;
-  }
+	.halaman .menu {
+		width: 10vw;
+	}
 
-  .halaman .menu .logo i {
-    font-size: 24px;
-  }
+	.halaman .menu .logo i {
+		font-size: 24px;
+	}
 
-  .halaman .menu .logo h1 {
-    display: none;
-  }
+	.halaman .menu .logo h1 {
+		display: none;
+	}
 
-  .halaman .menu ul li i {
-    display: flex;
-    justify-content: center;
-    font-size: 18px;
-  }
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+	}
 
-  .halaman .menu ul li span {
-    display: none;
-  }
+	.halaman .menu ul li span {
+		display: none;
+	}
 
-  .halaman .konten .judul h1 {
-    font-size: 18px;
-  }
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
 
-  .halaman .konten table {
-    font-size: 12px;
-  }
+	.halaman .konten table {
+		font-size: 12px;
+	}
 }
 
 /* Notebook -------------------------------------------------------------------------------*/
 @media only screen and (min-width: 1024px) and (max-width: 1290px) {
-  .halaman .menu .logo i,
-  .halaman .menu .logo h1 {
-    font-size: 14px;
-    color: #007bff;
-  }
+	.halaman .menu .logo i,
+	.halaman .menu .logo h1 {
+		font-size: 14px;
+		color: #007bff;
+	}
 
-  .halaman .menu ul li {
-    font-size: 12px;
-  }
+	.halaman .menu ul li {
+		font-size: 12px;
+	}
 
-  .halaman .konten .judul h1 {
-    font-size: 14px;
-  }
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
 
-  .halaman .konten table {
-    font-size: 12px;
-  }
+	.halaman .konten table {
+		font-size: 12px;
+	}
 }
