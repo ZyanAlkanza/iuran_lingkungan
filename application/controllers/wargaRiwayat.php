@@ -17,7 +17,7 @@
         {
             $warga = $this->session->userdata('email');
 
-            $data['warga'] = $this->db->query("SELECT * FROM warga wg, transaksi tr, detail_transaksi dt, iuran iu WHERE wg.id_warga=tr.id_warga AND dt.id_transaksi=tr.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.email='$warga'")->result();
+            $data['warga'] = $this->db->query("SELECT * FROM warga wg, transaksi tr, detail_transaksi dt, iuran iu WHERE wg.id_warga=tr.id_warga AND dt.id_transaksi=tr.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.email='$warga' ORDER BY tr.id_transaksi DESC")->result();
             $this->load->view('wargaRiwayat', $data);
         }
     }
