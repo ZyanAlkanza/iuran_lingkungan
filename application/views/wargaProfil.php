@@ -82,6 +82,8 @@
           <h1>Profil</h1>
         </div>
 
+        <?php echo $this->session->flashdata('pesan') ?>
+
         <?php foreach($warga as $wg) : ?>
         <div class="isi">
           <div class="nama">
@@ -109,7 +111,7 @@
             </a>
           </div>
           <div class="tombol mt-3">
-            <a href="#">
+            <a href="<?php echo base_url('wargaProfil/edit')?>">
               <button class="btn btn-outline-primary">Ubah Profil</button>
             </a>
           </div>
