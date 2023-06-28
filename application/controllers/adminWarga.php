@@ -15,7 +15,8 @@
         
         public function index()
         {   
-            $data['warga'] = $this->AdminWarga_m->tampil('warga')->result();
+            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='3'")->result();
+            // $data['warga'] = $this->AdminWarga_m->tampil('warga')->result();
             $this->load->view('adminWarga', $data);
         }
     }
