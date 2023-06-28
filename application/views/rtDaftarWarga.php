@@ -87,6 +87,11 @@
       <div class="konten">
         <div class="judul">
           <h1>Daftar Warga</h1>
+          <div class="tombol">
+            <a href="<?php echo base_url('rtDaftarWarga/tambah')?>">
+              <button class="btn btn-primary">Tambah</button>
+            </a>
+          </div>
         </div>
         <div class="bungkus">
           <table>
@@ -97,18 +102,60 @@
               <th>RT</th>
               <th>RW</th>
               <th>Telepon</th>
-              <th>Aksi</th>
+              <th class="aksi">Aksi</th>
             </tr>
 
+            <?php 
+            $no = 1;
+            foreach ($warga as $wg) :
+            ?>
+
             <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $wg->nama_warga ?></td>
+              <td><?php echo $wg->blok_rumah ?></td>
+              <td><?php echo $wg->rt ?></td>
+              <td><?php echo $wg->rw ?></td>
+              <td><?php echo $wg->telepon ?></td>
+              <td class="aksi">
+                <div class="tombol">
+                  <a href="<?php echo base_url('rtDaftarWarga/edit/') .$wg->id_warga?>">
+                    <button class="btn btn-success">Edit</button>
+                  </a>
+                </div>
+                <div class="tombol">
+                  <button class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">Hapus</button>
+                </div>
+              </td>
             </tr>
+
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Hapus Data Warga</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    Anda akan menghapus data Warga ini. Yakin?
+                  </div>
+
+                  <div class="modal-footer">
+                    <a href="<?php echo base_url('rtDaftarWarga')?>">
+                      <button type="button" class="btn btn-secondary pt-1 pd-1 text-small" data-dismiss="modal">Batal</button>
+                    </a>
+                    <a href="<?php echo base_url('rtDaftarWarga/hapus/') .$wg->id_warga?>">
+                      <button type="button" class="btn btn-danger pt-1 pd-1 text-small">Hapus</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <?php endforeach; ?>
+
           </table>
         </div>
       </div>
