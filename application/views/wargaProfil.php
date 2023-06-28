@@ -91,28 +91,33 @@
             <h2><?php echo $wg->nama_warga ?></h2>
           </div>
 
-          <div class="nama_pengguna">
-            <h1>Email</h1>
-            <h2><?php echo $wg->email ?></h2>
-          </div>
           <div class="alamat">
             <h1>Alamat</h1>
             <h2>Puri Kencana Blok <?php echo $wg->blok_rumah ?> RT. 0<?php echo $wg->rt ?> / RW. 0<?php echo $wg->rw ?></h2>
           </div>
+
           <div class="telepon">
             <h1>Telepon</h1>
             <h2><?php echo $wg->telepon ?></h2>
           </div>
 
+          <div class="email">
+            <h1>Email</h1>
+            <h2><?php echo $wg->email ?></h2>
+            <a href="<?php echo base_url('wargaProfil/gantiemail')?>">
+              <button class="btn btn-outline-primary">Ubah Email</button>
+            </a>
+          </div>
+
           <div class="tombol">
             <h1>Kata Sandi</h1>
             <a href="<?php echo base_url('wargaProfil/gantisandi')?>">
-              <button class="btn btn-primary">Ubah Sandi</button>
+              <button class="btn btn-outline-primary">Ubah Sandi</button>
             </a>
           </div>
           <div class="tombol mt-3">
             <a href="<?php echo base_url('wargaProfil/edit')?>">
-              <button class="btn btn-outline-primary">Ubah Profil</button>
+              <button class="btn btn-primary">Ubah Profil</button>
             </a>
           </div>
         </div>

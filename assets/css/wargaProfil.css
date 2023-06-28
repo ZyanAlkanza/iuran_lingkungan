@@ -116,6 +116,20 @@ body {
 	font-family: "nunito", sans-serif;
 }
 
+.halaman .konten .isi .email h2 {
+	margin-bottom: 10px;
+}
+
+.halaman .konten .isi .email button {
+	width: 150px;
+	height: 30px;
+	padding: 0 10px;
+	margin-bottom: 14px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+}
+
 .halaman .konten .isi .tombol button {
 	width: 150px;
 	height: 30px;
@@ -196,6 +210,16 @@ body {
 
 	.halaman .konten .isi h2 {
 		margin-bottom: 14px;
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi .email h2 {
+		margin-bottom: 10px;
+	}
+
+	.halaman .konten .isi .email button {
+		width: 100px;
+		height: 28px;
 		font-size: 12px;
 	}
 

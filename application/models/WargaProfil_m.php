@@ -5,6 +5,11 @@
             $this->db->update($table, $data);
         }
 
+        public function updateemail($where, $data, $table){
+            $this->db->where($where);
+            $this->db->update($table, $data);
+        }
+
         public function updatesandi($where, $data, $table){
             $this->db->where($where);
             $this->db->update($table, $data);

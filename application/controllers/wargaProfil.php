@@ -40,13 +40,11 @@
 
             $id_warga   = $this->input->post('id_warga');
             $nama_warga = $this->input->post('nama_warga');
-            $email      = $this->input->post('email');
             $blok_rumah = $this->input->post('blok_rumah');
             $telepon    = $this->input->post('telepon');
 
             $data = array(
                 'nama_warga'    => $nama_warga,
-                'email'         => $email,
                 'blok_rumah'    => $blok_rumah,
                 'telepon'       => $telepon,
             );
@@ -66,6 +64,47 @@
             }
         }
 
+        public function gantiemail()
+        {
+            $warga = $this->session->userdata('email');
+
+            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.email='$warga'")->result();
+            $this->load->view('wargaProfil_gantiemail', $data);
+        }
+
+        public function gantiemailbaru()
+        {
+            $id_warga           = $this->input->post('id_warga');
+            $email_baru         = $this->input->post('email_baru');
+            $konfirmasi_email   = $this->input->post('konfirmasi_email');
+
+            $this->form_validation->set_rules('email_baru', 'Email Baru', 'required|valid_email');
+            $this->form_validation->set_rules('konfirmasi_email', 'Konfirmasi Email Baru', 'required|matches[email_baru]', array('matches' => 'Email anda tidak sesuai'));
+
+            if($this->form_validation->run() == FALSE){
+                $this->gantiemail();
+            }else{
+
+            $data = array(
+                'email'        => $email_baru,
+            );
+
+            $where = array(
+                'id_warga'          => $id_warga,
+            );
+            
+            $this->WargaProfil_m->updateemail($where, $data, 'warga');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Email <strong>Berhasil</strong> diubah!. Silahkan Login kembali.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>');
+            redirect('login');
+            
+            }
+        }
+
         public function gantisandi()
         {
             $warga = $this->session->userdata('email');
@@ -81,7 +120,7 @@
             $konfirmasi_sandi = $this->input->post('konfirmasi_sandi');
 
             $this->form_validation->set_rules('sandi_baru', 'Kata Sandi Baru', 'required');
-            $this->form_validation->set_rules('konfirmasi_sandi', 'Konfirmasi', 'required|matches[sandi_baru]');
+            $this->form_validation->set_rules('konfirmasi_sandi', 'Konfirmasi Kata Sandi Baru', 'required|matches[sandi_baru]');
 
             if($this->form_validation->run() == FALSE){
                 $this->gantisandi();
@@ -108,7 +147,6 @@
         public function _rules()
         {
             $this->form_validation->set_rules('nama_warga', 'Nama Warga', 'required');
-            $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
             $this->form_validation->set_rules('blok_rumah', 'Blok Rumah', 'required');
             $this->form_validation->set_rules('telepon', 'Telepon', 'required|numeric');
         }
