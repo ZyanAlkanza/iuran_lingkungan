@@ -1,5 +1,5 @@
 <?php 
-    class RtData extends CI_Controller{
+    class rtData extends CI_Controller{
         
         public function __construct()
         {
@@ -14,7 +14,8 @@
         }
         public function index()
         {
-            $this->load->view('rtData');
+            $data['transaksi'] = $this->RtData_m->tampil('transaksi')->result();
+            $this->load->view('rtData', $data);
         }
     }
 

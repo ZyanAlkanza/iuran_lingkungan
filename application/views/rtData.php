@@ -46,28 +46,28 @@
 
         <!-- Menu -->
         <ul>
-          <a href="<?php echo base_url('#')?>">
+          <a href="<?php echo base_url('rtData')?>">
             <li>
               <i class="fa-solid fa-file-circle-check"></i>
               <span>Data Pembayaran</span>
             </li>
           </a>
 
-          <a href="<?php echo base_url('#')?>">
+          <a href="<?php echo base_url('rtDaftarWarga')?>">
             <li>
               <i class="fa-solid fa-user-group"></i>
               <span>Daftar Warga</span>
             </li>
           </a>
 
-          <a href="<?php echo base_url('#')?>">
+          <a href="<?php echo base_url('rtKonfirmasi')?>">
             <li>
               <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
               <span>Form Pembayaran</span>
             </li>
           </a>
 
-          <a href="<?php echo base_url('#')?>">
+          <a href="<?php echo base_url('rtRiwayat')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
               <span>Riwayat Pembayaran</span>
@@ -99,15 +99,30 @@
               <th>Jenis Iuran</th>
               <th>Status</th>
             </tr>
+
+            <?php 
+            $no = 1;
+            foreach ($transaksi as $tr) : 
+            ?>
+
             <tr>
-              <td>1</td>
-              <td>Zyan Alkanza</td>
-              <td>D7</td>
-              <td>18/01/2023</td>
-              <td>Januari</td>
-              <td>Iuran Lingkungan</td>
-              <td>Sudah</td>
+              <td><?php echo $no++ ?></td>
+              <td><?php echo $tr->nama_warga ?></td>
+              <td><?php echo $tr->blok_rumah ?></td>
+              <td><?php echo date('d F Y', strtotime($tr->tanggal_pembayaran)) ?></td>
+              <td><?php echo $tr->pembayaran_bulan ?></td>
+              <td><?php echo $tr->jenis_iuran ?></td>
+              <td><?php if ($tr->status == 0) {
+                    echo '<span class="badge badge-pill badge-warning p-1 pr-2 pl-2">Belum di Verifikasi</span>';
+                  } elseif ($tr->status == 1) {
+                    echo '<span class="badge badge-pill badge-danger p-1 pr-2 pl-2">Belum Bayar</span>';
+                  } else {
+                    echo '<span class="badge badge-pill badge-success p-1 pr-2 pl-2">Sudah Bayar</span>';
+                  }?></td>
             </tr>
+
+            <?php endforeach; ?>
+
           </table>
         </div>
       </div>
