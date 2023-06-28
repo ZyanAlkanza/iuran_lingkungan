@@ -66,6 +66,45 @@
             }
         }
 
+        public function gantisandi()
+        {
+            $warga = $this->session->userdata('email');
+
+            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.email='$warga'")->result();
+            $this->load->view('wargaProfil_gantisandi', $data);
+        }
+
+        public function gantisandibaru()
+        {
+            $id_warga         = $this->input->post('id_warga');
+            $sandi_baru       = $this->input->post('sandi_baru');
+            $konfirmasi_sandi = $this->input->post('konfirmasi_sandi');
+
+            $this->form_validation->set_rules('sandi_baru', 'Kata Sandi Baru', 'required');
+            $this->form_validation->set_rules('konfirmasi_sandi', 'Konfirmasi', 'required|matches[sandi_baru]');
+
+            if($this->form_validation->run() == FALSE){
+                $this->gantisandi();
+            }else{
+            $data = array(
+                'password'      => $sandi_baru,
+            );
+
+            $where = array(
+                'id_warga'      => $id_warga,
+            );
+
+            $this->WargaProfil_m->updatesandi($where, $data, 'warga');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Kata Sandi <strong>Berhasil</strong> diubah!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>');
+            redirect('wargaProfil');
+            }
+        }
+
         public function _rules()
         {
             $this->form_validation->set_rules('nama_warga', 'Nama Warga', 'required');

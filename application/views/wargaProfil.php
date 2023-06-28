@@ -106,7 +106,7 @@
 
           <div class="tombol">
             <h1>Kata Sandi</h1>
-            <a href="#">
+            <a href="<?php echo base_url('wargaProfil/gantisandi')?>">
               <button class="btn btn-primary">Ubah Sandi</button>
             </a>
           </div>
