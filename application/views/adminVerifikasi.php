@@ -163,12 +163,12 @@
                   </a>
                 </div> -->
                 <div class="tombol">
-                    <button class="btn btn-danger" data-toggle="modal" data-target="#staticBackdrop">Hapus</button>
+                    <button class="btn btn-danger" data-toggle="modal" data-target="#delete<?php echo $tr->id_transaksi?>">Hapus</button>
                 </div>
               </td>
             </tr>
 
-            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal fade" id="delete<?php echo $tr->id_transaksi?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
