@@ -49,6 +49,19 @@
             }
         }
 
+        public  function hapus($id)
+        {
+            $where = array('id_warga' => $id);
+            $this->RtDaftarWarga_m->hapusdata($where, 'warga');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Data <strong>Berhasil</strong> dihapus!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>');
+            redirect('rtDaftarWarga');
+        }
+
         public function _rules()
         {
             $this->form_validation->set_rules('nama_warga', 'Nama Warga', 'required');
