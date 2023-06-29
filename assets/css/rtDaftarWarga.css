@@ -152,7 +152,7 @@ tr:nth-child(even) {
 	gap: 5px;
 }
 
-.halaman .konten button {
+.halaman .konten .bungkus .aksi button {
 	padding: 0 8px;
 	height: 24px;
 	font-size: 12px;
