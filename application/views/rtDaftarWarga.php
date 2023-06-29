@@ -94,6 +94,9 @@
           </div>
         </div>
         <div class="bungkus">
+
+          <?php echo $this->session->flashdata('pesan') ?>
+
           <table>
             <tr>
               <th>No</th>
@@ -114,8 +117,8 @@
               <td><?php echo $no++ ?></td>
               <td><?php echo $wg->nama_warga ?></td>
               <td><?php echo $wg->blok_rumah ?></td>
-              <td><?php echo $wg->rt ?></td>
-              <td><?php echo $wg->rw ?></td>
+              <td>RT. 0<?php echo $wg->rt ?></td>
+              <td>RW. 0<?php echo $wg->rw ?></td>
               <td><?php echo $wg->telepon ?></td>
               <td class="aksi">
                 <div class="tombol">

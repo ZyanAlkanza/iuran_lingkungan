@@ -41,47 +41,48 @@
         <form method="POST" action="<?php echo base_url('rtDaftarWarga/tambahdata')?>" enctype="multipart/form-data">
             <h1>Tambah Warga</h1>
 
-            <div class="form-group">
+            
                 <label for="nama_warga">Nama Warga <span class="text-danger">*</span></label>
                 <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="nama_warga" aria-describedby="emailHelp" name="nama_warga">
                 <div class="text-small text-danger"><?php echo form_error('nama_warga'); ?></div>
-            </div>
+            
 
-            <div class="form-group">
+            
                 <label for="email">Email <span class="text-danger">*</span></label>
                 <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
                 <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
-            </div>
+            
 
-            <div class="form-group">
+            
                 <label for="blok_rumah">Blok Rumah <span class="text-danger">*</span></label>
                 <input type="text" pattern="[A-Z0-9]*" class="form-control" id="blok_rumah" aria-describedby="emailHelp" name="blok_rumah" placeholder="Contoh : D7">
                 <div class="text-small text-danger text-blok">*Ditulis huruf besar</div>
                 <div class="text-small text-danger"><?php echo form_error('blok_rumah'); ?></div>
-            </div>
+            
 
-            <div class="form-group">
+            
                 <label for="rt">RT <span class="text-danger">*</span></label>
                 <select name="rt" id="rt" class="form-control">
                   <option value="">-- Pilih RT --</option>
-                  <option value="1">RT. 001</option>
-                  <option value="2">RT. 002</option>
-                  <option value="3">RT. 003</option>
-                  <option value="4">RT. 004</option>
-                  <option value="5">RT. 005</option>
-                  <option value="6">RT. 006</option>
-                  <option value="7">RT. 007</option>
-                  <option value="8">RT. 008</option>
-                  <option value="9">RT. 009</option>
-                  <option value="10">RT. 010</option>
+                  <option value="1">RT. 01</option>
+                  <option value="2">RT. 02</option>
+                  <option value="3">RT. 03</option>
+                  <option value="4">RT. 04</option>
+                  <option value="5">RT. 05</option>
+                  <option value="6">RT. 06</option>
+                  <option value="7">RT. 07</option>
+                  <option value="8">RT. 08</option>
+                  <option value="9">RT. 09</option>
+                  <option value="10">RT. 10</option>
                 </select>
-            </div>
+                <div class="text-small text-danger"></div>
+           
 
-            <div class="form-group">
+            
                 <label for="telepon">Telepon <span class="text-danger">*</span></label>
                 <input type="text" pattern="[0-9]*" class="form-control" id="telepon" aria-describedby="emailHelp" name="telepon">
                 <div class="text-small text-danger"><?php echo form_error('telepon'); ?></div>
-            </div>
+            
             
             
 
