@@ -1,0 +1,190 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* color {
+  -blue: #007bff;
+  -red: #dd0000;
+  -black: #343a40;
+  -grey: #eeeeee;
+} */
+
+body {
+	min-height: 100vh;
+}
+
+.halaman {
+	background-color: #007bff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Konten ------------------------------------------------------------------------------------*/
+.halaman .konten {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 500px;
+	height: 500px;
+	padding: 30px;
+}
+
+.halaman .konten .judul h1 {
+	font-family: "nunito", sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #007bff;
+}
+
+/* Isi Konten --------------------------------------------------------------------------------*/
+.halaman .konten .isi h1 {
+	/* background-color: yellow; */
+	font-size: 16px;
+	font-weight: 600;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .konten .isi h2 {
+	/* background-color: yellow; */
+	margin-bottom: 24px;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+}
+
+.halaman .konten .isi .tombol button {
+	width: 150px;
+	height: 30px;
+	padding: 0 10px;
+	text-align: center;
+	font-size: 14px;
+	font-family: "nunito", sans-serif;
+}
+
+/* Phone -------------------------------------------------------------------------------*/
+@media only screen and (max-width: 319px) {
+	.halaman .menu {
+		width: 15vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi h2 {
+		font-size: 12px;
+	}
+}
+
+/* Smartphone -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.halaman .konten {
+		height: 450px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi h2 {
+		margin-bottom: 14px;
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi .tombol button {
+		width: 150px;
+		height: 28px;
+		font-size: 12px;
+	}
+}
+
+/* Tablet -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.halaman .menu {
+		width: 10vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 24px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten .isi h2 {
+		font-size: 14px;
+	}
+}
+
+/* Notebook -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+	.halaman .menu .logo i,
+	.halaman .menu .logo h1 {
+		font-size: 14px;
+		color: #007bff;
+	}
+
+	.halaman .menu ul li {
+		font-size: 12px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten .isi h1 {
+		font-size: 12px;
+	}
+
+	.halaman .konten .isi h2 {
+		font-size: 12px;
+	}
+}

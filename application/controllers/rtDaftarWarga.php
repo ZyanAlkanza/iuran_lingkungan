@@ -49,6 +49,12 @@
             }
         }
 
+        public function detail($id)
+        {
+            $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.id_warga='$id'")->result();
+            $this->load->view('rtDaftarWarga_detail', $data);
+        }
+
         public  function hapus($id)
         {
             $where = array('id_warga' => $id);

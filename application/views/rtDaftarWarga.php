@@ -122,6 +122,11 @@
               <td><?php echo $wg->telepon ?></td>
               <td class="aksi">
                 <div class="tombol">
+                  <a href="<?php echo base_url('rtDaftarWarga/detail/') .$wg->id_warga?>">
+                    <button class="btn btn-primary">Detail</button>
+                  </a>
+                </div>
+                <div class="tombol">
                   <a href="<?php echo base_url('rtDaftarWarga/edit/') .$wg->id_warga?>">
                     <button class="btn btn-success">Edit</button>
                   </a>
