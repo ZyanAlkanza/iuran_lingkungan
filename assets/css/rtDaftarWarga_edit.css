@@ -1,0 +1,212 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* color {
+  -blue: #007bff;
+  -red: #dd0000;
+  -black: #343a40;
+  -grey: #eeeeee;
+} */
+
+body {
+	min-height: 100vh;
+}
+
+.halaman {
+	background-color: #007bff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Konten ------------------------------------------------------------------------------------*/
+
+/* Isi Konten --------------------------------------------------------------------------------*/
+.halaman form {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 500px;
+	height: 700px;
+	padding: 30px;
+}
+
+.halaman form h1 {
+	font-family: "nunito";
+	font-size: 24px;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 50px;
+	color: #007bff;
+}
+
+.halaman form label {
+	font-size: 14px;
+	font-family: "nunito";
+}
+
+.halaman form input {
+	font-size: 14px;
+	font-family: "nunito";
+}
+
+.halaman form select {
+	font-size: 14px;
+}
+
+.halaman form .text-small {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 700;
+	height: 20px;
+}
+
+.halaman form .text-blok {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 500;
+}
+
+.halaman form .wajib {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.halaman form .submit {
+	margin-top: 24px;
+	width: 100%;
+}
+
+.halaman form input:invalid {
+	border: 2px solid red;
+	animation: shake 0.2s;
+}
+
+@keyframes shake {
+	25% {
+		translate: 6px 0;
+	}
+
+	50% {
+		translate: -6px 0;
+	}
+
+	75% {
+		translate: 6px 0;
+	}
+}
+
+/* Phone -------------------------------------------------------------------------------*/
+@media only screen and (max-width: 319px) {
+	.halaman .menu {
+		width: 15vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+}
+
+/* Smartphone -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.halaman form h1 {
+		font-size: 18px;
+	}
+
+	.halaman form label {
+		font-size: 12px;
+	}
+
+	.halaman form input {
+		font-size: 12px;
+	}
+
+	.halaman form select {
+		font-size: 12px;
+	}
+
+	.halaman form .text-blok {
+		font-family: "nunito";
+		font-size: 10px;
+		font-weight: 500;
+	}
+
+	.halaman form .submit {
+		font-size: 14px;
+	}
+}
+
+/* Tablet -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.halaman .menu {
+		width: 10vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 24px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
+
+	.halaman .konten table {
+		font-size: 12px;
+	}
+}
+
+/* Notebook -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+	.halaman .menu .logo i,
+	.halaman .menu .logo h1 {
+		font-size: 14px;
+		color: #007bff;
+	}
+
+	.halaman .menu ul li {
+		font-size: 12px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten table {
+		font-size: 12px;
+	}
+}
