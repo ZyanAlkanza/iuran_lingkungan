@@ -47,7 +47,10 @@
         <?php echo $this->session->flashdata('pesan') ?>
 
         <?php foreach($warga as $wg) : ?>
-        <div class="isi">
+        <form method="post" action="<?php echo base_url('rtDaftarWarga/reset')?>">
+
+          <input type="hidden" value="<?= $wg->id_warga?>" name="id_warga">
+
           <div class="nama">
             <h1>Nama Warga</h1>
             <h2><?php echo $wg->nama_warga ?></h2>
@@ -70,12 +73,11 @@
 
           <div class="tombol">
             <h1>Kata Sandi</h1>
-            <a href="<?php echo base_url('#')?>">
-              <button class="btn btn-outline-danger">Reset Kata Sandi</button>
-            </a>
+              <button type="submit" class="btn btn-outline-danger">Reset Kata Sandi</button>
+              <!-- <input type="submit" name="reset" value="Reset Kata Sandi" class="btn btn-outline-danger"> -->
           </div>
           
-        </div>
+        </form>
         <?php endforeach; ?>
 
       </div>

@@ -41,21 +41,21 @@ body {
 }
 
 /* Isi Konten --------------------------------------------------------------------------------*/
-.halaman .konten .isi h1 {
+.halaman .konten form h1 {
 	/* background-color: yellow; */
 	font-size: 16px;
 	font-weight: 600;
 	font-family: "nunito", sans-serif;
 }
 
-.halaman .konten .isi h2 {
+.halaman .konten form h2 {
 	/* background-color: yellow; */
 	margin-bottom: 24px;
 	font-size: 14px;
 	font-family: "nunito", sans-serif;
 }
 
-.halaman .konten .isi .tombol button {
+.halaman .konten form .tombol button {
 	width: 150px;
 	height: 30px;
 	padding: 0 10px;
@@ -111,16 +111,16 @@ body {
 		font-size: 18px;
 	}
 
-	.halaman .konten .isi h1 {
+	.halaman .konten form h1 {
 		font-size: 12px;
 	}
 
-	.halaman .konten .isi h2 {
+	.halaman .konten form h2 {
 		margin-bottom: 14px;
 		font-size: 12px;
 	}
 
-	.halaman .konten .isi .tombol button {
+	.halaman .konten form .tombol button {
 		width: 150px;
 		height: 28px;
 		font-size: 12px;

@@ -55,6 +55,29 @@
             $this->load->view('rtDaftarWarga_detail', $data);
         }
 
+        public function reset()
+        {
+            $id_warga       = $this->input->post('id_warga');
+            $password       = '123';
+
+            $data = array(
+                'password'  => $password,
+            );
+
+            $where = array(
+                'id_warga'  => $id_warga,
+            );
+
+            $this->RtDaftarWarga_m->updatedata($where, $data, 'warga');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Kata Sandi <strong>Berhasil</strong> direset!
+                <button type="button" class="close pesan" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>');
+            redirect('rtDaftarWarga');
+        }
+
         public function edit($id)
         {
             $data['rt'] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
