@@ -49,34 +49,34 @@
             }
         }
 
-        // public function detail($id)
-        // {
-        //     $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.id_warga='$id'")->result();
-        //     $this->load->view('rtDaftarWarga_detail', $data);
-        // }
+        public function detail($id)
+        {
+            $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.id_warga='$id'")->result();
+            $this->load->view('rwDaftarRt_detail', $data);
+        }
 
-        // public function reset()
-        // {
-        //     $id_warga       = $this->input->post('id_warga');
-        //     $password       = '123';
+        public function reset()
+        {
+            $id_warga       = $this->input->post('id_warga');
+            $password       = '123';
 
-        //     $data = array(
-        //         'password'  => $password,
-        //     );
+            $data = array(
+                'password'  => $password,
+            );
 
-        //     $where = array(
-        //         'id_warga'  => $id_warga,
-        //     );
+            $where = array(
+                'id_warga'  => $id_warga,
+            );
 
-        //     $this->RtDaftarWarga_m->updatedata($where, $data, 'warga');
-        //     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-        //         Kata Sandi <strong>Berhasil</strong> direset!
-        //         <button type="button" class="close pesan" data-dismiss="alert" aria-label="Close">
-        //         <span aria-hidden="true">&times;</span>
-        //         </button>
-        //         </div>');
-        //     redirect('rtDaftarWarga');
-        // }
+            $this->RtDaftarWarga_m->updatedata($where, $data, 'warga');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+                Kata Sandi <strong>Berhasil</strong> direset!
+                <button type="button" class="close pesan" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>');
+            redirect('rwDaftarRt');
+        }
 
         // public function edit($id)
         // {

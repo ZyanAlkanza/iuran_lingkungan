@@ -108,12 +108,12 @@
               <td><?php echo $wg->telepon ?></td>
               <td class="aksi">
                 <div class="tombol">
-                  <a href="<?php echo base_url('rtDaftarWarga/detail/') .$wg->id_warga?>">
+                  <a href="<?php echo base_url('rwDaftarRt/detail/') .$wg->id_warga?>">
                     <button class="btn btn-primary">Detail</button>
                   </a>
                 </div>
                 <div class="tombol">
-                  <a href="<?php echo base_url('rtDaftarWarga/edit/') .$wg->id_warga?>">
+                  <a href="<?php echo base_url('rwDaftarRt/edit/') .$wg->id_warga?>">
                     <button class="btn btn-success">Edit</button>
                   </a>
                 </div>
@@ -137,10 +137,10 @@
                   </div>
 
                   <div class="modal-footer">
-                    <a href="<?php echo base_url('rtDaftarWarga')?>">
+                    <a href="<?php echo base_url('rwDaftarRt')?>">
                       <button type="button" class="btn btn-secondary pt-1 pd-1 text-small" data-dismiss="modal">Batal</button>
                     </a>
-                    <a href="<?php echo base_url('rtDaftarWarga/hapus/') .$wg->id_warga?>">
+                    <a href="<?php echo base_url('rwDaftarRt/hapus/') .$wg->id_warga?>">
                       <button type="button" class="btn btn-danger pt-1 pd-1 text-small">Hapus</button>
                     </a>
                   </div>
