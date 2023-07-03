@@ -2,7 +2,7 @@
     class rwDaftarRt extends CI_Controller{
         public function index()
         {
-            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='1'")->result();
+            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='1' ORDER BY warga.rt")->result();
             $this->load->view('rwDaftarRt', $data);
         }
 
