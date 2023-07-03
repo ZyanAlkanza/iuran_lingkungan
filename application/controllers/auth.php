@@ -29,6 +29,8 @@
                         case 3:
                             redirect('wargaProfil');
                             break;
+                        case 4:
+                            redirect('rwData');
                         default:
                             break;
                     }
