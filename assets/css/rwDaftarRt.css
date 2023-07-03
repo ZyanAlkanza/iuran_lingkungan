@@ -49,7 +49,6 @@ body {
 	margin-top: 5px;
 }
 
-/* ---------------------------------------------------ADD */
 .halaman .menu ul li span {
 	font-family: "nunito", sans-serif;
 	margin-left: 0px;
@@ -66,7 +65,6 @@ body {
 	background: #eeeeee;
 }
 
-/* ---------------------------------------------------ADD */
 .halaman .menu ul li i {
 	width: 25px;
 }
@@ -118,7 +116,13 @@ body {
 }
 
 /* Isi Konten --------------------------------------------------------------------------------*/
-.halaman .konten table {
+.halaman .konten .bungkus {
+	overflow-x: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #e8e8e8 #fff;
+}
+
+.halaman .konten .bungkus table {
 	width: 100%;
 	font-size: 14px;
 	font-family: "nunito", sans-serif;
@@ -126,23 +130,29 @@ body {
 	border: 1px solid #eeeeee;
 }
 
-.halaman .konten tr,
+.halaman .konten tr {
+	height: 45px;
+}
+
+.halaman .konten th,
 td {
-	padding: 5px 0;
+	padding: 0 5px;
 }
 
 tr:nth-child(even) {
 	background-color: #eeeeee;
 }
 
-.halaman .konten .aksi {
+.halaman .konten .bungkus .aksi {
+	height: 45px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+	align-items: center;
 	gap: 5px;
 }
 
-.halaman .konten button {
+.halaman .konten .bungkus .aksi button {
 	padding: 0 8px;
 	height: 24px;
 	font-size: 12px;
@@ -206,18 +216,20 @@ tr:nth-child(even) {
 		font-size: 16px;
 	}
 
-	.halaman .konten table {
+	.halaman .konten .bungkus table {
 		font-size: 12px;
 	}
 
-	.halaman .konten .aksi {
-		flex-direction: column;
+	.halaman .konten .bungkus .aksi {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
 	}
 
-	.halaman .konten .aksi button {
+	.halaman .konten .bungkus .aksi button {
 		width: 40px;
 		padding: 0;
-		font-size: 10px;
+		font-size: 11px;
 	}
 }
 
