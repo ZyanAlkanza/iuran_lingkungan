@@ -73,6 +73,36 @@
       <div class="konten">
         <div class="judul">
           <h1>Data Pembayaran</h1>
+
+          <form action="" method="POST">
+              <!-- <input type="text" class="form-control pencarian" name= "pencarian" placeholder="Cari Nama, Blok Rumah atau Bulan..." autocomplete="off" aria-label="Recipient's username" aria-describedby="button-addon2"> -->
+              <select name="bulan" id="pencarian" class="form-control">
+                <option value="">-- Pilih Bulan --</option>
+                <option value="Januari">Januari</option>
+                <option value="Februari">Februari</option>
+                <option value="Maret">Maret</option>
+                <option value="April">April</option>
+                <option value="Mei">Mei</option>
+                <option value="Juni">Juni</option>
+                <option value="Juli">Juli</option>
+                <option value="Agustus">Agustus</option>
+                <option value="September">September</option>
+                <option value="Oktober">Oktober</option>
+                <option value="November">November</option>
+                <option value="Desember">Desember</option>
+              </select>
+
+              <select name="rt" id="pencarian" class="form-control">
+                <option value="">-- Pilih RT --</option>
+                <option value="8">RT.08</option>
+                <option value="9">RT.09</option>
+              </select>
+
+              <div class="input-group-append">
+                <button class="btn btn-outline-primary cari" type="submit" id="button-addon2">Cari</button>
+              </div>
+            </form>
+
         </div>
         <div class="bungkus">
           <table>
@@ -80,6 +110,7 @@
               <th>No</th>
               <th>Nama</th>
               <th>Blok Rumah</th>
+              <th>RT</th>
               <th>Tanggal Pembayaran</th>
               <th>Pembayaran Bulan</th>
               <th>Jenis Iuran</th>
@@ -95,6 +126,7 @@
               <td><?php echo $no++ ?></td>
               <td><?php echo $tr->nama_warga ?></td>
               <td><?php echo $tr->blok_rumah ?></td>
+              <td>RT. 0<?php echo $tr->rt ?></td>
               <td><?php echo date('d F Y', strtotime($tr->tanggal_pembayaran)) ?></td>
               <td><?php echo $tr->pembayaran_bulan ?></td>
               <td><?php echo $tr->jenis_iuran ?></td>
@@ -110,6 +142,13 @@
             <?php endforeach; ?>
 
           </table>
+
+          <?php if(empty($transaksi)) :?>
+          <div class="alert alert-danger mt-3" role="alert">
+            Data Tidak Ditemukan!
+          </div>
+          <?php endif; ?>
+
         </div>
       </div>
     </div>
