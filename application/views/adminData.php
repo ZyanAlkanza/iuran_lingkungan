@@ -139,6 +139,13 @@
                 <?php endforeach; ?>
 
               </table>
+
+              <?php if(empty($transaksi)) :?>
+                <div class="alert alert-danger mt-3" role="alert">
+                  Data Tidak Ditemukan!
+                </div>
+              <?php endif; ?>
+
             </div>
           
           </form>
