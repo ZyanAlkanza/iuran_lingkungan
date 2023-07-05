@@ -46,7 +46,7 @@
 
           <div class="nama">
             <label for="">Email</label>
-            <input class="form-control" type="email" name="email" autocomplete="off"/>
+            <input class="form-control" type="text" name="email" autocomplete="off"/>
             <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
           </div>
           <div class="sandi">
