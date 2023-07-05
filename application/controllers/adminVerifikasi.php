@@ -16,26 +16,68 @@
 
         public function index()
         {
-            $data['transaksi'] = $this->AdminVerifikasi_m->tampil('transaksi')->result();
-            
-            if($this->input->post('pencarian')){
-                $pencarian = $this->input->post('pencarian', true);
-                // $this->db->like('nama_warga', $pencarian);
+            if($this->session->userdata('email') == 'bendahara9@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='9' ORDER BY tr.id_transaksi DESC")->result();
+                
+                if($this->input->post('pencarian')){
+                    $pencarian = $this->input->post('pencarian', true);
+                    $rt = 9;
+                    //tidak dipakai-- $this->db->like('nama_warga', $pencarian);
+                    //tidak dipakai-- $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
+                    $data['transaksi'] = $this->AdminVerifikasi_m->caridata($pencarian, $rt);
+                }
 
-                // $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
-                $data['transaksi'] = $this->AdminVerifikasi_m->caridata($pencarian);
+                $this->load->view('adminVerifikasi', $data);
+            }elseif($this->session->userdata('email') == 'bendahara8@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='8' ORDER BY tr.id_transaksi DESC")->result();
+                
+                if($this->input->post('pencarian')){
+                    $pencarian = $this->input->post('pencarian', true);
+                    $rt = 8;
+                    //tidak dipakai-- $this->db->like('nama_warga', $pencarian);
+                    //tidak dipakai-- $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
+                    $data['transaksi'] = $this->AdminVerifikasi_m->caridata($pencarian, $rt);
+                }
+                
+                $this->load->view('adminVerifikasi', $data);
             }
+
+
+
+            // $data['transaksi'] = $this->AdminVerifikasi_m->tampil('transaksi')->result();
             
-            $this->load->view('adminVerifikasi', $data);
+            // if($this->input->post('pencarian')){
+                // $pencarian = $this->input->post('pencarian', true);
+                //tidak dipakai-- $this->db->like('nama_warga', $pencarian);
+                //tidak dipakai-- $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.nama_warga='$pencarian'")->result();
+                // $data['transaksi'] = $this->AdminVerifikasi_m->caridata($pencarian);
+            // }
+            
+            // $this->load->view('adminVerifikasi', $data);
         }
 
         public function tambah()
         {
-            $data['transaksi']          = $this->AdminVerifikasi_m->tampil('transaksi')->result();
-            $data['detail_transaksi']   = $this->AdminDetail_m->tampil('detail_transaksi')->result();
-            $data['warga']              = $this->AdminWarga_m->tampil('warga')->result();
-            $data['iuran']              = $this->AdminIuran_m->tampil('iuran')->result();
-            $this->load->view('adminVerifikasi_tambah', $data);
+            if($this->session->userdata('email') == 'bendahara9@gmail.com'){
+                $data['transaksi']          = $this->AdminVerifikasi_m->tampil('transaksi')->result();
+                $data['detail_transaksi']   = $this->AdminDetail_m->tampil('detail_transaksi')->result();
+                $data['warga']              = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='9' AND wg.role='3'")->result();
+                $data['iuran']              = $this->AdminIuran_m->tampil('iuran')->result();
+                $this->load->view('adminVerifikasi_tambah', $data);
+            }elseif($this->session->userdata('email') == 'bendahara8@gmail.com'){
+                $data['transaksi']          = $this->AdminVerifikasi_m->tampil('transaksi')->result();
+                $data['detail_transaksi']   = $this->AdminDetail_m->tampil('detail_transaksi')->result();
+                $data['warga']              = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='8' AND wg.role='3'")->result();
+                $data['iuran']              = $this->AdminIuran_m->tampil('iuran')->result();
+                $this->load->view('adminVerifikasi_tambah', $data);
+            }
+
+
+            // $data['transaksi']          = $this->AdminVerifikasi_m->tampil('transaksi')->result();
+            // $data['detail_transaksi']   = $this->AdminDetail_m->tampil('detail_transaksi')->result();
+            // $data['warga']              = $this->AdminWarga_m->tampil('warga')->result();
+            // $data['iuran']              = $this->AdminIuran_m->tampil('iuran')->result();
+            // $this->load->view('adminVerifikasi_tambah', $data);
         }
 
         public function tambahdata()
@@ -133,11 +175,25 @@
 
         public function edit($id)
         {
-            $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND tr.id_transaksi='$id'")->result();
-            $data['warga'] = $this->AdminWarga_m->tampil('warga')->result();
-            $data['iuran'] = $this->AdminIuran_m->tampil('iuran')->result();
-            $data['bulan'] = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-            $this->load->view('adminVerifikasi_edit', $data);
+            if($this->session->userdata('email') == 'bendahara9@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND tr.id_transaksi='$id'")->result();
+                $data['warga']              = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='9' AND wg.role='3'")->result();
+                $data['iuran'] = $this->AdminIuran_m->tampil('iuran')->result();
+                $data['bulan'] = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                $this->load->view('adminVerifikasi_edit', $data);
+            }elseif($this->session->userdata('email') == 'bendahara8@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND tr.id_transaksi='$id'")->result();
+                $data['warga']              = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='8' AND wg.role='3'")->result();
+                $data['iuran'] = $this->AdminIuran_m->tampil('iuran')->result();
+                $data['bulan'] = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                $this->load->view('adminVerifikasi_edit', $data);
+            }
+
+            // $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND tr.id_transaksi='$id'")->result();
+            // $data['warga'] = $this->AdminWarga_m->tampil('warga')->result();
+            // $data['iuran'] = $this->AdminIuran_m->tampil('iuran')->result();
+            // $data['bulan'] = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+            // $this->load->view('adminVerifikasi_edit', $data);
         }
 
         public function editdata()
