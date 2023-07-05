@@ -2,8 +2,15 @@
     class rtDaftarWarga extends CI_Controller{
         public function index()
         {
-            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='3'")->result();
-            $this->load->view('rtDaftarWarga', $data);
+            if($this->session->userdata('email') == 'rt9@gmail.com'){
+                $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='9' AND wg.role='3' ORDER BY wg.blok_rumah ASC")->result();
+                $this->load->view('rtDaftarWarga', $data);
+            }elseif($this->session->userdata('email') == 'rt8@gmail.com'){
+                $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.rt='8' AND wg.role='3' ORDER BY wg.blok_rumah ASC")->result();
+                $this->load->view('rtDaftarWarga', $data);
+            }
+            // $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='3'")->result();
+            // $this->load->view('rtDaftarWarga', $data);
         }
 
         public function tambah()

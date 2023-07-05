@@ -60,19 +60,19 @@
             </li>
           </a>
 
-          <a href="<?php echo base_url('rtKonfirmasi')?>">
+          <!-- <a href="php echo base_url('rtKonfirmasi')?>">
             <li>
               <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
               <span>Form Pembayaran</span>
             </li>
           </a>
 
-          <a href="<?php echo base_url('rtRiwayat')?>">
+          <a href="php echo base_url('rtRiwayat')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
               <span>Riwayat Pembayaran</span>
             </li>
-          </a>
+          </a> -->
 
           <a href="<?php echo base_url('auth/logout')?>">
             <li class="keluar">
