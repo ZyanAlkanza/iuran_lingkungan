@@ -102,9 +102,6 @@
               <th>No</th>
               <th>Nama</th>
               <th>Jabatan</th>
-              <th>Blok Rumah</th>
-              <th>RT</th>
-              <th>RW</th>
               <th>Telepon</th>
               <th class="aksi">Aksi</th>
             </tr>
@@ -122,9 +119,6 @@
                   echo 'Bendahara RT';
                 } ?>
               </td>
-              <td><?php echo $wg->blok_rumah ?></td>
-              <td>RT. 0<?php echo $wg->rt ?></td>
-              <td>RW. 0<?php echo $wg->rw ?></td>
               <td><?php echo $wg->telepon ?></td>
               <td class="aksi">
                 <div class="tombol">
