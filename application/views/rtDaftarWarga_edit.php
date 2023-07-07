@@ -46,15 +46,15 @@
                 <input type="hidden" value="<?php echo $wg->id_warga?>" name="id_warga">
 
                 <label for="nama_warga">Nama Warga <span class="text-danger">*</span></label>
-                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="nama_warga" aria-describedby="emailHelp" name="nama_warga" value="<?php echo $wg->nama_warga?>" required>
+                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="nama_warga" aria-describedby="emailHelp" name="nama_warga" value="<?php echo $wg->nama_warga?>" required autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('nama_warga'); ?></div>       
                 
                 <label for="email">Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<?php echo $wg->email?>" required>
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<?php echo $wg->email?>" required autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
             
                 <label for="blok_rumah">Blok Rumah <span class="text-danger">*</span></label>
-                <input type="text" pattern="[A-Z0-9]*" class="form-control" id="blok_rumah" aria-describedby="emailHelp" name="blok_rumah" value="<?php echo $wg->blok_rumah?>" required>
+                <input type="text" pattern="[A-Z0-9]*" class="form-control" id="blok_rumah" aria-describedby="emailHelp" name="blok_rumah" value="<?php echo $wg->blok_rumah?>" required autocomplete="off">
                 <div class="text-small text-danger text-blok">*Ditulis huruf besar</div>
                 <div class="text-small text-danger"><?php echo form_error('blok_rumah'); ?></div>
                         
@@ -71,7 +71,7 @@
                 <div class="text-small text-danger"></div>
                 
                 <label for="telepon">Telepon <span class="text-danger">*</span></label>
-                <input type="text" pattern="[0-9]*" class="form-control" id="telepon" aria-describedby="emailHelp" name="telepon" value="<?php echo $wg->telepon?>" required>
+                <input type="text" pattern="[0-9]*" class="form-control" id="telepon" aria-describedby="emailHelp" name="telepon" value="<?php echo $wg->telepon?>" required autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('telepon'); ?></div>            
                 
               <?php endforeach; ?>  

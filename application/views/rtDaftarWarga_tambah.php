@@ -43,19 +43,19 @@
 
             
                 <label for="nama_warga">Nama Warga <span class="text-danger">*</span></label>
-                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="nama_warga" aria-describedby="emailHelp" name="nama_warga">
+                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="nama_warga" aria-describedby="emailHelp" name="nama_warga" autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('nama_warga'); ?></div>
             
 
             
                 <label for="email">Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="email" autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
             
 
             
                 <label for="blok_rumah">Blok Rumah <span class="text-danger">*</span></label>
-                <input type="text" pattern="[A-Z0-9]*" class="form-control" id="blok_rumah" aria-describedby="emailHelp" name="blok_rumah" placeholder="Contoh : D7">
+                <input type="text" pattern="[A-Z0-9]*" class="form-control" id="blok_rumah" aria-describedby="emailHelp" name="blok_rumah" placeholder="Contoh : D7" autocomplete="off">
                 <div class="text-small text-danger text-blok">*Ditulis huruf besar</div>
                 <div class="text-small text-danger"><?php echo form_error('blok_rumah'); ?></div>
             
@@ -80,7 +80,7 @@
 
             
                 <label for="telepon">Telepon <span class="text-danger">*</span></label>
-                <input type="text" pattern="[0-9]*" class="form-control" id="telepon" aria-describedby="emailHelp" name="telepon">
+                <input type="text" pattern="[0-9]*" class="form-control" id="telepon" aria-describedby="emailHelp" name="telepon" autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('telepon'); ?></div>
             
             
