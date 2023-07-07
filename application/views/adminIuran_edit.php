@@ -50,7 +50,7 @@
             
             <div class="form-group">
                 <label for="jenis-iuran">Jenis Iuran <span class="text-danger">*</span></label>
-                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="jenis-iuran" aria-describedby="emailHelp" name="jenis_iuran" value="<?php echo $irn->jenis_iuran?>">
+                <input type="text" pattern="[A-Za-z\s]*" class="form-control" id="jenis-iuran" aria-describedby="emailHelp" name="jenis_iuran" value="<?php echo $irn->jenis_iuran?>" autocomplete="off">
             </div>
             
             <div class="form-group">
@@ -59,7 +59,7 @@
                     <div class="input-group-prepend">
                     <div class="input-group-text">Rp.</div>
                     </div>
-                    <input type="number" pattern="[0-9]*" class="form-control" id="biaya" placeholder="100000"  name="biaya" value="<?php echo $irn->biaya?>">
+                    <input type="number" pattern="[0-9]*" class="form-control" id="biaya" placeholder="100000"  name="biaya" value="<?php echo $irn->biaya?>" autocomplete="off">
                 </div>
             </div>
             

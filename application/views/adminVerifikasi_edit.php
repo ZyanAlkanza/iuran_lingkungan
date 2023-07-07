@@ -64,7 +64,7 @@
                 </select>
 
                 <label for="atas_nama">Atas Nama <span class="text-danger">*</span></label>
-                <input name="atas_nama" id="atas_nama" type="text" value="<?php echo $tr->atas_nama?>" class="form-control">
+                <input name="atas_nama" id="atas_nama" type="text" value="<?php echo $tr->atas_nama?>" class="form-control" autocomplete="off">
 
                 <label for="tanggal_pembayaran">Tanggal Pembayaran <span class="text-danger">*</span></label>
                 <input name="tanggal_pembayaran" id="tanggal_pembayaran" type="date" value="<?php echo $tr->tanggal_pembayaran?>" class="form-control">

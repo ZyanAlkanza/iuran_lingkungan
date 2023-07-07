@@ -71,7 +71,7 @@
 
                 <!-- <div class="form-group"> -->
                     <label for="atas_nama">Atas Nama <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="atas_nama" aria-describedby="emailHelp" name="atas_nama">
+                    <input type="text" class="form-control" id="atas_nama" aria-describedby="emailHelp" name="atas_nama" autocomplete="off">
                     <div class="text-small text-danger mt-0 md-0"><?php echo form_error('atas_nama'); ?></div>
                 <!-- </div> -->
 
