@@ -8,6 +8,48 @@
             if($this->form_validation->run() == FALSE){
                 $this->load->view('login');
             }else{
+                // $email      = $this->input->post('email');
+                // $password   = $this->input->post('password');
+
+                // $cekemail = $this->db->get_where('warga', ['email' => $email])->row_array();
+
+                // if ($cekemail){
+                //     if(password_verify($password, $cekemail['password'])){
+                //         $data = [
+                //             'email' => $cekemail['email'],
+                //             'role'  => $cekemail['role'],
+                //         ];
+                //         $this->session->set_userdata($data);
+
+                //         switch ($cekemail['role']) {
+                //             case 1:
+                //                 redirect('rtData');
+                //                 break;
+                //             case 2:
+                //                 redirect('adminVerifikasi');
+                //                 break;
+                //             case 3:
+                //                 redirect('wargaProfil');
+                //                 break;
+                //             case 4:
+                //                 redirect('rwData');
+                //             default:
+                //                 break;
+                //     }
+                //     }else{
+                //         $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
+                //         Kata Sandi anda salah!
+                //         </div>');
+                //         redirect('auth/login');
+                //     }
+                // }else{
+                //     $this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">
+                //     Email anda salah!
+                //     </div>');
+                //     redirect('auth/login');
+                // }
+
+
                 $auth = $this->Auth_m->cek_login();
 
                 if($auth == FALSE){

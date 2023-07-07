@@ -41,7 +41,7 @@
                     'rt'            => $rt,
                     'rw'            => $rw,
                     'telepon'       => $telepon,
-                    'password'      => $password,
+                    'password'      => password_hash($password, PASSWORD_DEFAULT),
                     'role'          => $role,
                 );
 
@@ -68,7 +68,7 @@
             $password       = '123';
 
             $data = array(
-                'password'  => $password,
+                'password'  => password_hash($password, PASSWORD_DEFAULT),
             );
 
             $where = array(

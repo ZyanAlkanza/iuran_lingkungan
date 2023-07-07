@@ -126,7 +126,7 @@
                 $this->gantisandi();
             }else{
             $data = array(
-                'password'      => $sandi_baru,
+                'password'      => password_hash($sandi_baru, PASSWORD_DEFAULT),
             );
 
             $where = array(
