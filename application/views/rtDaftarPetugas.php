@@ -28,12 +28,12 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>fontawesome/css/all.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/rtDaftarWarga.css" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/rtDaftarPetugas.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/')?>/img/favicon.ico">
 
-    <title>Daftar Warga</title>
+    <title>Daftar Petugas</title>
   </head>
   <body>
     <div class="halaman">
@@ -86,9 +86,9 @@
       <!-- Konten -->
       <div class="konten">
         <div class="judul">
-          <h1>Daftar Warga</h1>
+          <h1>Daftar Petugas</h1>
           <div class="tombol">
-            <a href="<?php echo base_url('rtDaftarWarga/tambah')?>">
+            <a href="<?php echo base_url('rtDaftarPetugas/tambah')?>">
               <button class="btn btn-primary">Tambah</button>
             </a>
           </div>
@@ -122,12 +122,12 @@
               <td><?php echo $wg->telepon ?></td>
               <td class="aksi">
                 <div class="tombol">
-                  <a href="<?php echo base_url('rtDaftarWarga/detail/') .$wg->id_warga?>">
+                  <a href="<?php echo base_url('rtDaftarPetugas/detail/') .$wg->id_warga?>">
                     <button class="btn btn-primary">Detail</button>
                   </a>
                 </div>
                 <div class="tombol">
-                  <a href="<?php echo base_url('rtDaftarWarga/edit/') .$wg->id_warga?>">
+                  <a href="<?php echo base_url('rtDaftarPetugas/edit/') .$wg->id_warga?>">
                     <button class="btn btn-success">Edit</button>
                   </a>
                 </div>
@@ -141,20 +141,20 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Hapus Data Warga</h5>
+                    <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Hapus Data Petugas</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
                   </div>
                   <div class="modal-body">
-                    Anda akan menghapus data Warga ini. Yakin?
+                    Anda akan menghapus data Petugas ini. Yakin?
                   </div>
 
                   <div class="modal-footer">
-                    <a href="<?php echo base_url('rtDaftarWarga')?>">
+                    <a href="<?php echo base_url('rtDaftarPetugas')?>">
                       <button type="button" class="btn btn-secondary pt-1 pd-1 text-small" data-dismiss="modal">Batal</button>
                     </a>
-                    <a href="<?php echo base_url('rtDaftarWarga/hapus/') .$wg->id_warga?>">
+                    <a href="<?php echo base_url('rtDaftarPetugas/hapus/') .$wg->id_warga?>">
                       <button type="button" class="btn btn-danger pt-1 pd-1 text-small">Hapus</button>
                     </a>
                   </div>

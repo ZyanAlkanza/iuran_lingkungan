@@ -1,14 +1,20 @@
-<?php 
-    class rwDaftarRt extends CI_Controller{
+<?php
+    class rtDaftarPetugas extends CI_Controller{
         public function index()
         {
-            $data['warga'] = $this->db->query("SELECT * FROM warga WHERE warga.role='1' ORDER BY warga.rt")->result();
-            $this->load->view('rwDaftarRt', $data);
+            if($this->session->userdata('email') == 'rt9@gmail.com'){
+                $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.role='2' AND wg.rt='9'")->result();
+                $this->load->view('rtDaftarPetugas', $data);
+            }elseif($this->session->userdata('email') == 'rt8@gmail.com'){
+                $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.role='2' AND wg.rt='8'")->result();
+                $this->load->view('rtDaftarPetugas', $data);
+            }
+            
         }
 
         public function tambah()
         {
-            $this->load->view('rwDaftarRt_tambah');
+            $this->load->view('rtDaftarPetugas_tambah');
         }
 
         public function tambahdata()
@@ -25,7 +31,7 @@
                 $rw         = '18';
                 $telepon    = $this->input->post('telepon');
                 $password   = '123';
-                $role       = '1';
+                $role       = '2';
 
                 $data = array(
                     'nama_warga'    => $nama_warga,
@@ -34,7 +40,7 @@
                     'rt'            => $rt,
                     'rw'            => $rw,
                     'telepon'       => $telepon,
-                    'password'      => $password,
+                    'password'      => password_hash($password, PASSWORD_DEFAULT),
                     'role'          => $role,
                 );
 
@@ -45,14 +51,14 @@
                     <span aria-hidden="true">&times;</span>
                     </button>
                 </div>');
-                redirect('rwDaftarRt');
+                redirect('rtDaftarPetugas');
             }
         }
 
         public function detail($id)
         {
             $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.id_warga='$id'")->result();
-            $this->load->view('rwDaftarRt_detail', $data);
+            $this->load->view('rtDaftarPetugas_detail', $data);
         }
 
         public function reset()
@@ -67,7 +73,7 @@
             $where = array(
                 'id_warga'  => $id_warga,
             );
-
+            
             $this->RtDaftarWarga_m->updatedata($where, $data, 'warga');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                 Kata Sandi <strong>Berhasil</strong> direset!
@@ -75,14 +81,14 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-            redirect('rwDaftarRt');
+            redirect('rtDaftarPetugas');
         }
 
         public function edit($id)
         {
             $data['rt'] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
             $data['warga'] = $this->db->query("SELECT * FROM warga wg WHERE wg.id_warga='$id'")->result();
-            $this->load->view('rwDaftarRt_edit', $data);
+            $this->load->view('rtDaftarPetugas_edit', $data);
         }
 
         public function editdata()
@@ -111,7 +117,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
                 </div>');
-            redirect('rwDaftarRt');
+            redirect('rtDaftarPetugas');
             
         }
 
@@ -125,7 +131,7 @@
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>');
-            redirect('rwDaftarRt');
+            redirect('rtDaftarPetugas');
         }
 
         public function _rules()

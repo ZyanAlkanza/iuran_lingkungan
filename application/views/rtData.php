@@ -60,14 +60,14 @@
             </li>
           </a>
 
-          <!-- <a href="php echo base_url('rtKonfirmasi')?>">
+          <a href="<?php echo base_url('rtDaftarPetugas')?>">
             <li>
-              <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
-              <span>Form Pembayaran</span>
+              <i class="fas fa-user-shield"></i>
+              <span>Daftar Petugas</span>
             </li>
           </a>
 
-          <a href="php echo base_url('rtRiwayat')?>">
+          <!-- <a href="php echo base_url('rtRiwayat')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
               <span>Riwayat Pembayaran</span>
