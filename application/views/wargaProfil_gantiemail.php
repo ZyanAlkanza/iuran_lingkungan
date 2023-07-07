@@ -47,11 +47,11 @@
             <input class="form-control" type="hidden" id="id_warga" name="id_warga" value="<?php echo $wg->id_warga?>">
 
             <label for="email_baru">Email Baru <span class="text-danger">*</span></label>
-            <input class="form-control" type="email" id="email_baru" name="email_baru" autocomplete="off">
+            <input class="form-control" type="text" id="email_baru" name="email_baru" autocomplete="off">
             <div class="text-small text-danger"><?php echo form_error('email_baru'); ?></div>
 
             <label for="konfirmasi_email">Konfirmasi Email Baru <span class="text-danger">*</span></label>
-            <input class="form-control" type="email" id="konfirmasi_email" name="konfirmasi_email" autocomplete="off">
+            <input class="form-control" type="text" id="konfirmasi_email" name="konfirmasi_email" autocomplete="off">
             <div class="text-small text-danger"><?php echo form_error('konfirmasi_email'); ?></div>
 
             <div class="text-small text-danger">*Wajib diisi</div>

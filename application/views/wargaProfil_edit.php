@@ -47,18 +47,19 @@
             <input class="form-control" type="hidden" id="id_warga" name="id_warga" value="<?php echo $wg->id_warga?>">
 
             <label for="nama_warga">Nama Warga <span class="text-danger">*</span></label>
-            <input class="form-control" type="text" id="nama_warga" name="nama_warga" value="<?php echo $wg->nama_warga?>">
+            <input class="form-control" type="text" id="nama_warga" name="nama_warga" value="<?php echo $wg->nama_warga?>" autocomplete="off">
             <div class="text-small text-danger"><?php echo form_error('nama_warga'); ?></div>
 
             <label for="blok_rumah">Blok Rumah <span class="text-danger">*</span></label>
-            <input class="form-control" type="text" id="blok_rumah" name="blok_rumah" value="<?php echo $wg->blok_rumah?>">
+            <input class="form-control" pattern="[A-Z0-9]*" type="text" id="blok_rumah" name="blok_rumah" value="<?php echo $wg->blok_rumah?>" autocomplete="off">
+            <div class="text-small text-danger text-blok">*Ditulis huruf besar</div>
             <div class="text-small text-danger"><?php echo form_error('blok_rumah'); ?></div>
 
             <label for="telepon">Telepon <span class="text-danger">*</span></label>
-            <input class="form-control" type="text" id="telepon" name="telepon" value="<?php echo $wg->telepon?>">
+            <input class="form-control" type="text" id="telepon" name="telepon" value="<?php echo $wg->telepon?>" autocomplete="off">
             <div class="text-small text-danger"><?php echo form_error('telepon'); ?></div>
 
-            <div class="text-small text-danger">*Wajib diisi</div>
+            <div class="text-small text-danger wajib">*Wajib diisi</div>
             <button type="submit" class="btn btn-primary submit" name="submit">Simpan Perubahan</button>
 
             <?php endforeach; ?>

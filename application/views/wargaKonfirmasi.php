@@ -101,7 +101,7 @@
           </div>
           <div class="input-nama">
             <h3>Pembayaran Atas Nama <span class="text-danger">*</span></h3>
-            <input class="form-control" type="text" placeholder="a.n. " name="atas_nama"/>
+            <input class="form-control" type="text" placeholder="a.n. " name="atas_nama" autocomplete="off"/>
           </div>
           <div class="input-tanggal">
             <h3>Tanggal Pembayaran <span class="text-danger">*</span></h3>
