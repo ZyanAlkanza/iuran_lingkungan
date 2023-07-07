@@ -50,7 +50,7 @@
                 <div class="text-small text-danger"><?php echo form_error('nama_warga'); ?></div>       
                 
                 <label for="email">Email <span class="text-danger">*</span></label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<?php echo $wg->email?>" required autocomplete="off">
+                <input type="text" class="form-control" id="email" aria-describedby="emailHelp" name="email" value="<?php echo $wg->email?>" required autocomplete="off">
                 <div class="text-small text-danger"><?php echo form_error('email'); ?></div>
             
                 <label for="blok_rumah">Blok Rumah <span class="text-danger">*</span></label>
