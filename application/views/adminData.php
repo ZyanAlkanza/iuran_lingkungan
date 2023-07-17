@@ -46,7 +46,7 @@
 
         <!-- Menu -->
         <ul>
-        <a href="<?php echo base_url('adminIuran')?>">
+          <a href="<?php echo base_url('adminIuran')?>">
             <li>
             <i class="fas fa-money-check-alt"></i>
               <span>Iuran</span>
@@ -71,6 +71,13 @@
             <li>
               <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
               <span>Data Pembayaran</span>
+            </li>
+          </a>
+
+          <a href="<?php echo base_url('adminLaporan')?>">
+            <li>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>Laporan Pembayaran</span>
             </li>
           </a>
 

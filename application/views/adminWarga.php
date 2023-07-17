@@ -74,6 +74,13 @@
             </li>
           </a>
 
+          <a href="<?php echo base_url('adminLaporan')?>">
+            <li>
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span>Laporan Pembayaran</span>
+            </li>
+          </a>
+
           <a href="<?php echo base_url('auth/logout')?>">
             <li class="keluar">
               <i class="fa-solid fa-right-from-bracket"></i>

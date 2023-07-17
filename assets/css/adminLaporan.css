@@ -85,8 +85,8 @@ body {
 }
 
 /* Konten ------------------------------------------------------------------------------------*/
+
 .halaman .konten {
-	/* background-color: green; */
 	width: 85%;
 	padding: 10px 30px;
 }
@@ -108,14 +108,50 @@ body {
 	color: #007bff;
 }
 
-.halaman .konten .judul button {
-	padding: 0 8px;
-	height: 24px;
+.halaman .konten .filter {
+	display: flex;
+	flex-direction: row;
+	justify-content: right;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 20px;
+	/* background-color: #dd0000; */
+}
+.halaman .konten .filter label {
+	font-size: 14px;
+	font-family: "nunito";
+	color: #007bff;
+	margin: 0 10px;
+}
+
+.halaman .konten .filter input {
+	width: 150px;
+	height: 26px;
+	padding: 0;
+	font-size: 12px;
+	font-family: "nunito";
+}
+
+.halaman .konten .filter button {
+	height: 26px;
+	font-size: 12px;
+	font-family: "nunito";
+	margin-left: 10px;
+}
+
+.halaman .konten .judul .tombol a {
 	font-size: 12px;
 	font-family: "nunito";
 }
 
 /* Isi Konten --------------------------------------------------------------------------------*/
+
+.halaman .konten .bungkus {
+	overflow-x: scroll;
+	scrollbar-width: thin;
+	scrollbar-color: #e8e8e8 #fff;
+}
+
 .halaman .konten table {
 	width: 100%;
 	font-size: 14px;
@@ -138,11 +174,9 @@ tr:nth-child(even) {
 }
 
 .halaman .konten .aksi {
-	height: 40px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: center;
 	gap: 5px;
 }
 
@@ -209,7 +243,26 @@ tr:nth-child(even) {
 	.halaman .konten .judul h1 {
 		font-size: 16px;
 	}
+	/* -------------------- */
+	.halaman .konten .filter {
+		flex-direction: column;
+	}
+	.halaman .konten .filter label {
+		font-size: 12px;
+		margin-top: 5px;
+		width: 100%;
+	}
 
+	.halaman .konten .filter input {
+		width: 100%;
+	}
+
+	.halaman .konten .filter button {
+		width: 100%;
+		margin-top: 10px;
+		margin-left: 0px;
+	}
+	/* ------------------ */
 	.halaman .konten .judul button {
 		width: 100%;
 	}

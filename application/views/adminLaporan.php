@@ -28,12 +28,12 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/')?>fontawesome/css/all.min.css" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/adminIuran.css" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/')?>css/adminLaporan.css" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/')?>/img/favicon.ico">
 
-    <title>Daftar Iuran</title>
+    <title>Laporan Pembayaran</title>
   </head>
   <body>
     <div class="halaman">
@@ -93,75 +93,57 @@
       <!-- Konten -->
       <div class="konten">
         <div class="judul">
-          <h1>Daftar Iuran</h1>
-          <div class="tombol">
-            <a href="<?php echo base_url('adminIuran/tambah')?>">
-              <button class="btn btn-primary">Tambah</button>
-            </a>
-          </div>
+          <h1>Laporan Pembayaran</h1>
         </div>
-
-        <div class="flashdata">
-          <?php echo $this->session->flashdata('pesan') ?>
-        </div>  
+        <div class="bungkus">
 
         <table>
           <tr>
-            <th class="no">No</th>
-            <th class="jenis">Jenis Iuran</th>
-            <th class="biaya">Biaya</th>
-            <th class="aksi">Aksi</th>
+            <th>Nama Warga</th>
+            <th>Januari</th>
+            <th>Februari</th>
+            <th>Maret</th>
+            <th>April</th>
+            <th>Mei</th>
+            <th>Juni</th>
+            <th>Juli</th>
+            <th>Agustus</th>
+            <th>September</th>
+            <th>Oktober</th>
+            <th>November</th>
+            <th>Desember</th>
           </tr>
 
-          <?php 
-          $no = 1;
-          foreach ($iuran as $irn) :
-          ?>
-          
+          <?php foreach($warga as $wg): ?>
           <tr>
-            <td class="no"><?php echo $no++ ?></td>
-            <td class="jenis"><?php echo $irn->jenis_iuran ?></td>
-            <td class="biaya">Rp. <?php echo number_format($irn->biaya, 0, ',', '.') ?></td>
-            <td class="aksi">
-              <div class="tombol">
-                <a href="<?php echo base_url('adminIuran/edit/') .$irn->id_iuran?>">
-                  <button class="btn btn-success">Edit</button>
-                </a>
-              </div>
-              <div class="tombol">
-                <button class="btn btn-danger" data-toggle="modal" data-target="#delete<?php echo $irn->id_iuran?>">Hapus</button>
-              </div>
-            </td>
-          </tr>
+            <td><?php echo $wg->nama_warga ?></td>
+              
+              <?php foreach($bulan as $bln): ?>
 
-          <div class="modal fade" id="delete<?php echo $irn->id_iuran?>" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title font-weight-bold" id="staticBackdropLabel">Hapus Data Iuran</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  Anda akan menghapus data Iuran ini. Yakin?
-                </div>
+                
+                <td>
+                <?php foreach($transaksi as $tr): ?>
+                  <?php if($wg->id_warga == $tr->id_warga){
+                    if($tr->pembayaran_bulan == $bln){
+                      if($tr->status == '2'){
+                        echo '<span class="badge badge-pill badge-success">V</span>';
+                      } else {
+                        echo '<span class="badge badge-pill badge-danger">V</span>';
+                      }
+                    }
+                  } ?>
+                <?php endforeach; ?> 
+              </td>
+              
+              <?php endforeach; ?>
 
-                <div class="modal-footer">
-                  <a href="<?php echo base_url('adminIuran')?>">
-                    <button type="button" class="btn btn-secondary pt-1 pd-1 text-small" data-dismiss="modal">Batal</button>
-                  </a>
-                  <a href="<?php echo base_url('adminIuran/hapus/') .$irn->id_iuran?>">
-                    <button type="button" class="btn btn-danger pt-1 pd-1 text-small">Hapus</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <?php endforeach; ?>
-
+            </tr>
+        <?php endforeach; ?>
         </table>
+        
+
+        </div>
       </div>
     </div>
 
