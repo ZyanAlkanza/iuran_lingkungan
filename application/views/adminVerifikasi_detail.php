@@ -78,13 +78,16 @@
                 <option selected>-- <?php if($tr->status == 0){
                   echo 'Proses Verifikasi';
                 }elseif ($tr->status == 1) {
+                  echo 'Ditolak';
+                }elseif ($tr->status == 2) {
                   echo 'Belum Bayar';
                 }else{
                   echo 'Sudah Bayar';
                 } ?> --</option>
                 <option value="0">Proses Verifikasi</option>
-                <option value="1">Belum Bayar</option>
-                <option value="2">Sudah Bayar</option>
+                <option value="1">Ditolak</option>
+                <option value="2">Belum Bayar</option>
+                <option value="3">Sudah Bayar</option>
               </select>      
               <div class="keterangan">
                 <h1>Keterangan</h1>

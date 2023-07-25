@@ -133,6 +133,8 @@
               <td><?php if ($tr->status == 0) {
                     echo '<span class="badge badge-pill badge-warning p-1 pr-2 pl-2">Belum di Verifikasi</span>';
                   } elseif ($tr->status == 1) {
+                    echo '<span class="badge badge-pill badge-secondary p-1 pr-2 pl-2">Ditolak</span>';
+                  }elseif ($tr->status == 2) {
                     echo '<span class="badge badge-pill badge-danger p-1 pr-2 pl-2">Belum Bayar</span>';
                   } else {
                     echo '<span class="badge badge-pill badge-success p-1 pr-2 pl-2">Sudah Bayar</span>';

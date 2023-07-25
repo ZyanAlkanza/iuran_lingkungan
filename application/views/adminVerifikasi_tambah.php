@@ -122,8 +122,9 @@
                   <select class="form-control" id="status" name="status" required>
                     <option value="">Pilih Status</option>
                     <option value="0">Proses Verifikasi</option>
-                    <option value="1">Belum Bayar</option>
-                    <option value="2">Sudah Bayar</option>
+                    <option value="1">Ditolak</option>
+                    <option value="2">Belum Bayar</option>
+                    <option value="3">Sudah Bayar</option>
                   </select>
                 <!-- </div> -->
               </div>

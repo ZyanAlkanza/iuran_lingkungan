@@ -125,7 +125,7 @@
                 <?php foreach($transaksi as $tr): ?>
                   <?php if($wg->id_warga == $tr->id_warga){
                     if($tr->pembayaran_bulan == $bln){
-                      if($tr->status == '2'){
+                      if($tr->status == '3'){
                         echo '<span class="badge badge-pill badge-success">V</span>';
                       } else {
                         echo '<span class="badge badge-pill badge-danger">V</span>';
