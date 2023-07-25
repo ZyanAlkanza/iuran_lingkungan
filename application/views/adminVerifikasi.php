@@ -77,7 +77,7 @@
           <a href="<?php echo base_url('adminLaporan')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
-              <span>Laporan Pembayaran</span>
+              <span>Rekap Pembayaran</span>
             </li>
           </a>
 

@@ -33,7 +33,7 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="<?php echo base_url('assets/')?>/img/favicon.ico">
 
-    <title>Laporan Pembayaran</title>
+    <title>Rekap Pembayaran</title>
   </head>
   <body>
     <div class="halaman">
@@ -77,7 +77,7 @@
           <a href="<?php echo base_url('adminLaporan')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
-              <span>Laporan Pembayaran</span>
+              <span>Rekap Pembayaran</span>
             </li>
           </a>
 
@@ -93,7 +93,7 @@
       <!-- Konten -->
       <div class="konten">
         <div class="judul">
-          <h1>Laporan Pembayaran</h1>
+          <h1>Rekap Data Pembayaran</h1>
         </div>
         <div class="bungkus">
 
