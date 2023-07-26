@@ -91,7 +91,7 @@
               </select>      
               <div class="keterangan">
                 <h1>Keterangan</h1>
-                <textarea name="keterangan" id="keterangan" readonly><?php echo $tr->keterangan ?></textarea>
+                <textarea name="keterangan" id="keterangan"><?php echo $tr->keterangan ?></textarea>
               </div>
             </div>  
             <div class="gambar">

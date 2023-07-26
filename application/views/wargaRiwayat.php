@@ -92,6 +92,7 @@
               <th>Pembayaran Atas Nama</th>
               <th>Jenis Iuran</th>
               <th>Status Pembayaran</th>
+              <th>Keterangan</th>
             </tr>
 
             <?php
@@ -115,6 +116,7 @@
                       echo '<span class="badge badge-pill badge-success p-1 pr-2 pl-2">Sudah Bayar</span>';
                     }?>
               </td>
+              <td><?php echo $wg->keterangan ?></td>
             </tr>
 
             <?php endforeach; ?>

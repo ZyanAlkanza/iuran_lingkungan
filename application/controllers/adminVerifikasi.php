@@ -154,9 +154,11 @@
         {
             $id     = $this->input->post('id_transaksi');
             $status = $this->input->post('status');
+            $keterangan = $this->input->post('keterangan');
 
             $data = array(
                 'status' => $status,
+                'keterangan' => $keterangan,
             );
 
             $where = array(
