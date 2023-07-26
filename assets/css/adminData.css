@@ -172,6 +172,11 @@ tr:nth-child(even) {
 	background-color: #eeeeee;
 }
 
+.halaman .konten .total th {
+	text-align: left;
+	padding-left: 25px;
+}
+
 .halaman .konten .aksi {
 	display: flex;
 	flex-direction: row;

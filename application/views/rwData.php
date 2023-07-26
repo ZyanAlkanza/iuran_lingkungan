@@ -111,9 +111,9 @@
               <th>Nama</th>
               <th>Blok Rumah</th>
               <th>RT</th>
-              <th>Tanggal Pembayaran</th>
               <th>Pembayaran Bulan</th>
               <th>Jenis Iuran</th>
+              <th>Biaya</th>
               <th>Status</th>
             </tr>
 
@@ -127,9 +127,13 @@
               <td><?php echo $tr->nama_warga ?></td>
               <td><?php echo $tr->blok_rumah ?></td>
               <td>RT. 0<?php echo $tr->rt ?></td>
-              <td><?php echo date('d F Y', strtotime($tr->tanggal_pembayaran)) ?></td>
               <td><?php echo $tr->pembayaran_bulan ?></td>
               <td><?php echo $tr->jenis_iuran ?></td>
+              <td><?php if($tr->status=='3'){
+                echo 'Rp. ' . number_format($tr->biaya,0,',','.');
+                }else{
+                  echo '-';
+                } ?></td>
               <td><?php if ($tr->status == 0) {
                     echo '<span class="badge badge-pill badge-warning p-1 pr-2 pl-2">Belum di Verifikasi</span>';
                   } elseif ($tr->status == 1) {
@@ -142,6 +146,11 @@
             </tr>
 
             <?php endforeach; ?>
+
+            <tr class="total">
+              <th colspan="6">Total</th>
+              <th colspan="2">Rp.</th>
+            </tr>
 
           </table>
 

@@ -158,6 +158,11 @@ tr:nth-child(even) {
 	background-color: #eeeeee;
 }
 
+.halaman .konten .total th {
+	text-align: left;
+	padding-left: 25px;
+}
+
 /* Phone -------------------------------------------------------------------------------*/
 @media only screen and (max-width: 319px) {
 	.halaman .menu {
