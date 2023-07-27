@@ -149,7 +149,12 @@
 
             <tr class="total">
               <th colspan="6">Total</th>
-              <th colspan="2">Rp.</th>
+              <th colspan="2">Rp.
+              <?php
+                $total_biaya=$total*200000;
+                echo number_format($total_biaya,0,',','.');
+              ?>
+              </th>
             </tr>
 
           </table>

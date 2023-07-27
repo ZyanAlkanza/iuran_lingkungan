@@ -23,9 +23,13 @@
                 $this->_rules();
 
                 if ($this->form_validation->run() == FALSE){
+                    $status="status='3' AND rt='9'";
+                    $data['total'] = $this->db->from("detail_transaksi")->join('transaksi', 'transaksi.id_transaksi = detail_transaksi.id_transaksi')->join('warga', 'warga.id_warga = transaksi.id_warga')->where($status)->get()->num_rows();
                     $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='9' ORDER BY tr.id_transaksi DESC")->result();
                     $this->load->view('adminData', $data);
                 }else{
+                    $status="status='3' AND rt='9' AND date(tanggal_pembayaran) >='$dari' AND date(tanggal_pembayaran) <='$sampai'";
+                    $data['total'] = $this->db->from("detail_transaksi")->join('transaksi', 'transaksi.id_transaksi = detail_transaksi.id_transaksi')->join('warga', 'warga.id_warga = transaksi.id_warga')->where($status)->get()->num_rows();
                     $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='9' AND date(tanggal_pembayaran) >='$dari' AND date(tanggal_pembayaran) <='$sampai'")->result();
                     $this->load->view('adminData', $data);
                 }
@@ -36,9 +40,13 @@
                 $this->_rules();
 
                 if ($this->form_validation->run() == FALSE){
+                    $status="status='3' AND rt='8'";
+                    $data['total'] = $this->db->from("detail_transaksi")->join('transaksi', 'transaksi.id_transaksi = detail_transaksi.id_transaksi')->join('warga', 'warga.id_warga = transaksi.id_warga')->where($status)->get()->num_rows();
                     $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='8' ORDER BY tr.id_transaksi DESC")->result();
                     $this->load->view('adminData', $data);
                 }else{
+                    $status="status='3' AND rt='9' AND date(tanggal_pembayaran) >='$dari' AND date(tanggal_pembayaran) <='$sampai'";
+                    $data['total'] = $this->db->from("detail_transaksi")->join('transaksi', 'transaksi.id_transaksi = detail_transaksi.id_transaksi')->join('warga', 'warga.id_warga = transaksi.id_warga')->where($status)->get()->num_rows();
                     $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='8' AND date(tanggal_pembayaran) >='$dari' AND date(tanggal_pembayaran) <='$sampai'")->result();
                     $this->load->view('adminData', $data);
                 }
