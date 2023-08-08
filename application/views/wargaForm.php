@@ -103,11 +103,11 @@
               </div>
               <div class="input-nama">
                 <h3>Pembayaran Atas Nama <span class="text-danger">*</span></h3>
-                <input class="form-control" type="text" placeholder="a.n. " name="atas_nama" autocomplete="off"/>
+                <input class="form-control" type="text" placeholder="a.n. " name="atas_nama" autocomplete="off" required/>
               </div>
               <div class="input-tanggal">
                 <h3>Tanggal Pembayaran <span class="text-danger">*</span></h3>
-                <input class="form-control" type="date" name="tanggal_pembayaran"/>
+                <input class="form-control" type="date" name="tanggal_pembayaran" required/>
               </div>
 
               <!-- <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
@@ -191,7 +191,7 @@
                   <option value="Desember">Desember</option>
                 </select> -->
                 
-                <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
+              <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="Januari" id="Januari" name="bulan1">
                 <label class="form-check-label" for="Januari">
