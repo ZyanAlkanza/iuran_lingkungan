@@ -53,7 +53,14 @@
             </li>
           </a>
 
-          <a href="<?php echo base_url('wargaKonfirmasi')?>">
+          <!-- <a href="<php echo base_url('wargaKonfirmasi')?>">
+            <li>
+              <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
+              <span>Form Pembayaran</span>
+            </li>
+          </a> -->
+
+          <a href="<?php echo base_url('wargaForm')?>">
             <li>
               <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
               <span>Form Pembayaran</span>

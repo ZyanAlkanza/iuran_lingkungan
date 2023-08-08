@@ -54,13 +54,20 @@
             </li>
           </a>
 
-          <a href="<?php echo base_url('wargaKonfirmasi')?>">
+          <!-- <a href="<php echo base_url('wargaKonfirmasi')?>">
+            <li>
+              <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
+              <span>Form Pembayaran</span>
+            </li>
+          </a> -->
+          
+          <a href="<?php echo base_url('wargaForm')?>">
             <li>
               <i class="fa-sharp fa-solid fa-file-invoice-dollar"></i>
               <span>Form Pembayaran</span>
             </li>
           </a>
-
+          
           <a href="<?php echo base_url('wargaRiwayat')?>">
             <li>
               <i class="fa-solid fa-clock-rotate-left"></i>
@@ -68,12 +75,6 @@
             </li>
           </a>
 
-          <a href="<?php echo base_url('wargaForm')?>">
-            <li>
-              <i class="fa-solid fa-circle-info" style="color: #ffff00;"></i>
-              <span style="color: #ffff00;">Form Pembayaran</span>
-            </li>
-          </a>
 
           <a href="<?php echo base_url('auth/logout')?>">
             <li class="keluar">
