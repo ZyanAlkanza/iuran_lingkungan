@@ -59,7 +59,8 @@
                 <div class="text-small text-danger"><?php echo form_error('blok_rumah'); ?></div>
                         
                 <label for="rt">RT <span class="text-danger">*</span></label>
-                <select name="rt" id="rt" class="form-control">
+                <select name="rt" id="rt" class="form-control" required>
+                  <option value="">--Pilih RT--</option>
                   <?php foreach ($rt as $r) : ?>
                     <?php if($r == $wg->rt) : ?>
                       <option value="<?= $r;?>" selected>RT. 0<?= $r;?></option>

@@ -62,8 +62,8 @@
 
             
                 <label for="rt">RT <span class="text-danger">*</span></label>
-                <select name="rt" id="rt" class="form-control">
-                  <option value="">-- Pilih RT --</option>
+                <select name="rt" id="rt" class="form-control" required>
+                  <option value="">--Pilih RT--</option>
                   <option value="1">RT. 01</option>
                   <option value="2">RT. 02</option>
                   <option value="3">RT. 03</option>
