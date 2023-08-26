@@ -1,0 +1,256 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* color {
+  -blue: #007bff;
+  -red: #dd0000;
+  -black: #343a40;
+  -grey: #eeeeee;
+} */
+
+body {
+	min-height: 100vh;
+}
+
+.halaman {
+	background-color: #007bff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+/* Konten ------------------------------------------------------------------------------------*/
+
+/* Isi Konten --------------------------------------------------------------------------------*/
+.halaman form {
+	background-color: #fff;
+	border-radius: 10px;
+	width: 500px;
+	height: 95vh;
+	padding: 30px;
+}
+
+.halaman form h1 {
+	font-family: "nunito";
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	color: #007bff;
+}
+
+.halaman .kolom {
+	display: flex;
+	flex-direction: column;
+}
+
+.halaman .kolom .subKolom {
+	display: flex;
+	flex-direction: row;
+}
+
+.halaman .kolom .subKolom label {
+	font-family: "nunito";
+	margin-bottom: 5px;
+}
+
+.halaman .kolom .kolom-kiri {
+	width: 50%;
+	margin-right: 5px;
+}
+
+.halaman .kolom .kolom-kanan {
+	width: 50%;
+	margin-right: 5px;
+}
+
+.halaman .kolom label {
+	font-family: "nunito";
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+
+.halaman .kolom input {
+	font-family: "nunito";
+	font-size: 14px;
+	margin-bottom: 10px;
+	height: 35px;
+}
+
+.halaman .kolom .rupiah {
+	font-family: "nunito";
+	font-size: 14px;
+	height: 35px;
+}
+
+.halaman .kolom textarea {
+	font-family: "nunito";
+	resize: none;
+	height: 150px;
+	font-size: 14px;
+}
+
+.halaman form .submit {
+	font-family: "nunito";
+	margin-top: 20px;
+	width: 100%;
+}
+
+.halaman .kolom .text-small {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 400;
+	margin-top: 0;
+	height: 15px;
+}
+
+.halaman .text-small {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 400;
+	margin: 0px;
+	padding: 0px;
+	height: 10px;
+}
+
+.halaman .kolom .wajib {
+	font-family: "nunito";
+	font-size: 12px;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+/* Phone -------------------------------------------------------------------------------*/
+@media only screen and (max-width: 319px) {
+	.halaman .menu {
+		width: 15vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 20px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 14px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+}
+
+/* Smartphone -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.halaman form {
+		padding: 30px;
+	}
+
+	.halaman form h1 {
+		font-size: 18px;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+
+	.halaman .kolom .kolom-kiri {
+		width: 50%;
+		margin-right: 6px;
+	}
+
+	.halaman .kolom .kolom-kanan {
+		width: 50%;
+		margin-right: 6px;
+	}
+
+	.halaman .kolom textarea {
+		height: 150px;
+		font-size: 12px;
+	}
+
+	.halaman form .submit {
+		font-size: 14px;
+		margin-top: 20px;
+	}
+
+	.halaman .kolom .text-small {
+		height: 12px;
+		font-size: 11px;
+	}
+
+	.halaman .text-small {
+		height: 10px;
+	}
+
+	.halaman .kolom .wajib {
+		font-size: 12px;
+		font-weight: 600;
+		margin-top: 10px;
+	}
+}
+
+/* Tablet -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	.halaman .menu {
+		width: 10vw;
+	}
+
+	.halaman .menu .logo i {
+		font-size: 24px;
+	}
+
+	.halaman .menu .logo h1 {
+		display: none;
+	}
+
+	.halaman .menu ul li i {
+		display: flex;
+		justify-content: center;
+		font-size: 18px;
+	}
+
+	.halaman .menu ul li span {
+		display: none;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 18px;
+	}
+
+	.halaman .konten table {
+		font-size: 12px;
+	}
+}
+
+/* Notebook -------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1024px) and (max-width: 1290px) {
+	.halaman .menu .logo i,
+	.halaman .menu .logo h1 {
+		font-size: 14px;
+		color: #007bff;
+	}
+
+	.halaman .menu ul li {
+		font-size: 12px;
+	}
+
+	.halaman .konten .judul h1 {
+		font-size: 14px;
+	}
+
+	.halaman .konten table {
+		font-size: 12px;
+	}
+}

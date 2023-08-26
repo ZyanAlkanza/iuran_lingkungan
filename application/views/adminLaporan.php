@@ -81,6 +81,13 @@
             </li>
           </a>
 
+          <!-- <a href="<?php echo base_url('adminPengeluaran')?>">
+            <li>
+              <i class="fa-solid fa-money-check-dollar" style="color: #ff0000;"></i>
+              <span style="color: #ff0000;">Data Pengeluaran</span>
+            </li>
+          </a> -->
+
           <a href="<?php echo base_url('auth/logout')?>">
             <li class="keluar">
               <i class="fa-solid fa-right-from-bracket"></i>
@@ -114,6 +121,11 @@
             <th>Desember</th>
           </tr>
 
+          <?php 
+          $laporan = false;
+          
+          ?>
+
           <?php foreach($warga as $wg): ?>
           <tr>
             <td><?php echo $wg->nama_warga ?></td>
@@ -126,15 +138,22 @@
                   <?php if($wg->id_warga == $tr->id_warga){
                     if($tr->pembayaran_bulan == $bln){
                       if($tr->status == '3'){
-                        echo '<span class="badge badge-pill badge-success">V</span>';
-                      } else {
-                        echo '<span class="badge badge-pill badge-danger">V</span>';
-                      }
+                        $laporan = true;
+                      } 
                     }
                   } ?>
                 <?php endforeach; ?> 
-              </td>
               
+                <?php 
+                  if($laporan==true){
+                    echo '<span class="badge badge-pill badge-success">V</span>';
+                  }else{
+                    echo '<span class="badge badge-pill badge-danger">V</span>';
+                  }
+
+                  $laporan=false;
+                ?>
+                </td>
               <?php endforeach; ?>
 
 
