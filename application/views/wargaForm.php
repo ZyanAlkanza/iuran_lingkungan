@@ -269,7 +269,8 @@
             <div class="bungkus-kanan">
               <div class="input-bukti">
                 <h3>Bukti Pembayaran <span class="text-danger">*</span></h3>
-                <input class="form-control" type="file" name="bukti_pembayaran" required/>
+                <input class="form-control bukti" type="file" name="bukti_pembayaran" required/>
+                <div class="text-small text-danger pesan-keterangan">*Format file JPG, JPEG, PNG</div>
               </div>
               <div class="input-keterangan">
                 <h3>Keterangan</h3>

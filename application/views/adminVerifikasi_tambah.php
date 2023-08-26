@@ -72,13 +72,13 @@
                 <!-- <div class="form-group"> -->
                     <label for="atas_nama">Atas Nama <span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="atas_nama" aria-describedby="emailHelp" name="atas_nama" autocomplete="off">
-                    <div class="text-small text-danger mt-0 md-0"><?php echo form_error('atas_nama'); ?></div>
+                    <div class="text-small text-danger mt-0 md-0 pesan-kesalahan"><?php echo form_error('atas_nama'); ?></div>
                 <!-- </div> -->
 
                 <!-- <div class="form-group"> -->
                     <label for="tanggal_pembayaran">Tanggal Pembayaran <span class="text-danger">*</span></label>
                     <input type="date" class="form-control" id="tanggal_pembayaran" aria-describedby="emailHelp" name="tanggal_pembayaran">
-                    <div class="text-small text-danger mt-0 md-0"><?php echo form_error('tanggal_pembayaran'); ?></div>
+                    <div class="text-small text-danger mt-0 md-0 pesan-kesalahan"><?php echo form_error('tanggal_pembayaran'); ?></div>
                 <!-- </div> -->
 
                 <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
@@ -107,13 +107,13 @@
                 <!-- <div class="form-group"> -->
                     <label for="bukti_pembayaran">Bukti Pembayaran <span class="text-danger">*</span></label>
                     <input type="file" class="form-control" id="bukti_pembayaran" aria-describedby="emailHelp" name="bukti_pembayaran" required>
-                    <div class="text-small text-danger">*Format file JPG, JPEG, PNG</div>
+                    <div class="text-small text-danger pesan-keterangan">*Format file JPG, JPEG, PNG</div>
                 <!-- </div> -->
 
                 <!-- <div class="form-group"> -->
                   <label for="keterangan" class="keterangan">Keterangan</label>
                   <textarea class="form-control" id="keterangan" name="keterangan" maxlength="300"></textarea>
-                  <div class="text-small text-danger">*Maksimal 300 karakter</div>
+                  <div class="text-small text-danger pesan-keterangan">*Maksimal 300 karakter</div>
                 <!-- </div> -->
 
                 

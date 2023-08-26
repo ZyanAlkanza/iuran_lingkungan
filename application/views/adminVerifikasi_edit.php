@@ -48,7 +48,7 @@
                 <input name="id_transaksi" type="hidden" value="<?php echo $tr->id_transaksi?>">
 
                 <label for="id_iuran">Jenis Iuran <span class="text-danger">*</span></label>
-                <select name="id_iuran" id="id_iuran" class="form-control">
+                <select name="id_iuran" id="id_iuran" class="form-control" required>
                   <option value="">-- Pilih Iuran --</option>
                   <?php foreach  ($iuran as $iu) : ?>
                   <option value="<?php echo $iu->id_iuran?>" <?php echo $iu->id_iuran == $tr->id_iuran ? 'selected' : ''?>><?php echo $iu->jenis_iuran ?></option>
@@ -56,7 +56,7 @@
                 </select>
 
                 <label for="id_warga">Nama Warga <span class="text-danger">*</span></label>
-                <select name="id_warga" id="id_warga" class="form-control">
+                <select name="id_warga" id="id_warga" class="form-control" required>
                   <option value="">-- Pilih Warga --</option>
                   <?php foreach  ($warga as $wg) : ?>
                   <option value="<?php echo $wg->id_warga?>" <?php echo $wg->id_warga == $tr->id_warga ? 'selected' : ''?>><?php echo $wg->nama_warga ?></option>
@@ -64,13 +64,14 @@
                 </select>
 
                 <label for="atas_nama">Atas Nama <span class="text-danger">*</span></label>
-                <input name="atas_nama" id="atas_nama" type="text" value="<?php echo $tr->atas_nama?>" class="form-control" autocomplete="off">
+                <input name="atas_nama" id="atas_nama" type="text" value="<?php echo $tr->atas_nama?>" class="form-control" autocomplete="off" required>
 
                 <label for="tanggal_pembayaran">Tanggal Pembayaran <span class="text-danger">*</span></label>
-                <input name="tanggal_pembayaran" id="tanggal_pembayaran" type="date" value="<?php echo $tr->tanggal_pembayaran?>" class="form-control">
+                <input name="tanggal_pembayaran" id="tanggal_pembayaran" type="date" value="<?php echo $tr->tanggal_pembayaran?>" class="form-control" required>
 
                 <label for="pembayaran_bulan">Pembayaran Bulan <span class="text-danger">*</span></label>
-                <select name="pembayaran_bulan" id="pembayaran_bulan" class="form-control">
+                <select name="pembayaran_bulan" id="pembayaran_bulan" class="form-control" required>
+                  <option value="">--Pilih Bulan--</option>
                 <?php foreach ($bulan as $bln) : ?>
                       <?php if($bln == $tr->pembayaran_bulan) : ?>
                         <option value="<?= $bln;?>" selected><?= $bln; ?></option>
