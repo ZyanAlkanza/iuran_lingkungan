@@ -7,6 +7,7 @@ yaitu dengan melakukan pembayaran langsung kepada petugas, kemudian mencatatnya 
 Dengan Sistem ini, pembayaran dan pencatatan iuran lingkungan dapat dilakukan secara daring. 
 Pengguna hanya perlu melakukan login ke sistem, lalu mengisi form pembayaran dan mengupload bukti pembayaran iuran lingkungan.
 Dengan adanya sistem ini, diharapkan akan mempermudah pengguna dalam melakukan pembayaran dan pencatatan iuran lingkungan.
+
 *******************
 Informasi Perilisan
 *******************
