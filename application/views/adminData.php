@@ -97,7 +97,10 @@
               <h1>Data Pembayaran</h1>
               <div class="tombol">
                 <a href="<?php echo base_url().'adminData/pdf/?dari='.set_value('dari').'&sampai='.set_value('sampai')?>" class="btn btn-primary">
-                Cetak PDF
+                Lap. Pembayaran
+                </a>
+                <a href="<?php echo base_url().'adminData/tunggak'?>" class="btn btn-danger">
+                Lap. Tunggakan
                 </a>
               </div>
             </div>
@@ -107,8 +110,8 @@
               <input type="date" name="dari" class="form-control">
               <label for="sampai">Sampai tanggal</label>
               <input type="date" name="sampai" class="form-control">
-                <button class="btn btn-outline-primary" type="submit">Cari</button>
-              </div>
+              <button class="btn btn-outline-primary" type="submit">Cari</button>
+            </div>
             
             <div class="bungkus">
               <table>

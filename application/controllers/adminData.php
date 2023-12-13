@@ -108,6 +108,37 @@
 
         }
 
+        public function tunggak()
+        {
+            // $dari   = $this->input->get('dari');
+            // $sampai = $this->input->get('sampai');
+            $this->load->library('dompdf_gen');
+                
+            // $data['transaksi'] = $this->AdminData_m->tampil('transaksi')->result();
+            // $this->load->view('adminData_pdf', $data);
+
+            // $this->_rules();
+
+            if($this->session->userdata('email') == 'bendahara9@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='9' AND dt.status!='3'")->result();
+                $this->load->view('adminData_pdf2', $data);
+            }elseif($this->session->userdata('email') == 'bendahara8@gmail.com'){
+                $data['transaksi'] = $this->db->query("SELECT * FROM transaksi tr, warga wg, detail_transaksi dt, iuran iu WHERE tr.id_warga=wg.id_warga AND tr.id_transaksi=dt.id_transaksi AND dt.id_iuran=iu.id_iuran AND wg.rt='8' AND dt.status!='3'")->result();
+                $this->load->view('adminData_pdf2', $data);
+            }
+
+
+            $paper_size = 'A4';
+            $orientation = 'potrait';
+            $html = $this->output->get_output();
+
+            $this->dompdf->set_paper($paper_size, $orientation);
+            $this->dompdf->load_html($html);
+            $this->dompdf->render();
+            $this->dompdf->stream("laporan_iuran.pdf", array('Attachment' => 0));
+
+        }
+
         public function _rules()
         {
             $this->form_validation->set_rules('dari', 'Dari tanggal', 'required');
