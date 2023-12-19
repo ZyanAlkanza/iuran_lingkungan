@@ -12,7 +12,7 @@ Sistem ini masih terus dikembangkan.
 
 ## Teknologi
 
-Codeigniter 3
-PHP 5.6
-MySQL
-Bootstrap 4.6
+Codeigniter 3<br>
+PHP 5.6<br>
+MySQL<br>
+Bootstrap 4.6<br>
