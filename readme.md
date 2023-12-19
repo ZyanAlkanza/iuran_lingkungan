@@ -14,5 +14,5 @@ Sistem ini masih terus dikembangkan.
 
 Codeigniter 3<br>
 PHP 5.6<br>
-MySQL<br>
+MySQL 5.6<br>
 Bootstrap 4.6<br>
